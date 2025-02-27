@@ -1,0 +1,27 @@
+body * {
+  color: inherit;
+}
+
+section,
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.container-small,
+.container-medium,
+.container-large {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
