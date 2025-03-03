@@ -54,7 +54,7 @@ npm run build:prod
 
 ## You Need To Know
 
-- We already have [Bootstrap v5.2](https://getbootstrap.com/) and [jQuery](https://jquery.com/) in this project, so you don't need to add it manually in html.
+- We already have [jQuery](https://jquery.com/) in this project, so you don't need to add it manually in html.
 - For images and fonts or other asset resources, put all assets in `/src/media` folder and it will be copied to `/dist/assets/media` folder. Also when you want to add a plugin into this project, you should put the plugin in `/src/plugins` folder, and it will be copied to `/dist/assets/plugins`.
 - For styling pages separately, you just need to create a file with name without underscore in front of the file name in the folder `/src/scss/pages`.
 - For javascript files, you can add a javascript file anywhere and it will compiled according to the file path in the `dist` folder.
