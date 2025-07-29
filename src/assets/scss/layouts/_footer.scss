@@ -1,0 +1,1368 @@
+.footer {
+  background-color: #060C3C;
+  color: #fff;
+  font-family: sans-serif;
+  margin-top: 100px;
+  width: 100%; // agar full lebar halaman
+
+  .footer-top {
+    padding: 60px 124px;
+    background-color: #060C3C;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .footer-top::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 100px;
+      width: 150px;
+      height: 1px;
+      background-color: #3f4676;
+    }
+
+  
+    .footer-top-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        max-width: 600px;
+
+       h2 {
+ 
+  top: 64px;
+  left: 164px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+p {
+  top: 134px;
+  left: 164px;
+  width: 480px;
+  height: 56px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #B4B6C4;
+  opacity: 0.8;
+  margin-bottom: 0; // karena height sudah fix, biasanya ini direset
+}
+
+
+       .newsletter-form {
+  width: 480px;
+  height: 66px;
+  top: 222px;
+  left: 164px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 1;
+  transform: rotate(0deg); // sesuai angle: 0 deg
+  transform: translateY(40px);
+
+  .newsletter-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .newsletter-button {
+    background-color: #6c4af2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(7px) translateX(-7px);
+
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: bottom;
+
+    &:hover {
+      background-color: #593ad0;
+    }
+}
+        }
+    }
+.right {
+  position: relative; // Wajib biar .right img absolute-nya ngikut div ini
+
+  img {
+    position: absolute;
+    width: 500.14px;
+    height: 240.96px;
+
+    left: 50%; // posisinya berada di tengah horizontal
+    transform: translate(-100%, -180px); // geser sedikit ke kiri, dan ke atas
+
+    // Bisa disesuaikan dengan:
+    // transform: translateX(150px); kalau mau lebih ke kanan
+  }
+}
+
+    }
+  }
+
+ .footer-bottom {
+    background-color: #060C3C;
+    padding: 60px 124px 30px;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 82%;            // agar lebih pendek
+    height: 1px;
+    background-color: #3f4676;
+    position: absolute;
+    top: 30px;             // atur turun dikit dari atas
+    left: 50%;
+    transform: translateX(-50%); // center secara horizontal
+  }
+
+
+    .footer-bottom-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+
+      .footer-brand {
+  max-width: 280px;
+
+  p {
+    width: 344px;
+    color: #B4B6C4;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p:nth-of-type(2) {
+    transform: translateY(5px); // geser ke atas dikit
+  }
+
+  p:nth-of-type(3) {
+    transform: translateY(0px); // bisa beda juga kalau mau
+  
+
+
+          img {
+            margin-right: 8px;
+            vertical-align: middle;
+          }
+        }
+
+       .logo-container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 400px;
+  left: 162px;
+  padding: 3.13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25px;
+  opacity: 1;
+  transform: rotate(0deg); // angle: 0 deg
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  top: 400px;
+  left: 162px;
+  padding: 3.13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25px;
+  opacity: 1;
+  transform: rotate(0deg); // angle: 0 deg
+  box-sizing: border-box;
+}
+
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 60px;
+        transform: translateX(-30px) translateY(30px);
+
+      h4 {
+  width: 63px;
+  height: 20px;
+  top: 450px;
+  left: 726px;
+  color: #ffffff;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  margin-bottom: 12px;
+  opacity: 1;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    width: 100%;
+    white-space: nowrap;
+    top: 486px;
+    left: 726px;
+    color: #B4B6C4;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    opacity: 1;
+    margin-bottom: 8px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+  }
+        }
+      }
+    }
+
+    .footer-bottom-bar {
+      margin-top: 40px;
+      border-top: 1px solid #3f4676;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-family: "Chivo", sans-serif;
+      font-weight: 400;
+      color: #d1d5db;
+
+      .socials img {
+        margin-left: 12px;
+        width: 18px;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  position: relative;
+
+  .footer-left-decoration {
+    position: absolute;
+    width: 104px;
+    height: 194px;
+    top: 70px;
+    left: 9px;
+    z-index: 0;
+    transform: translateY(70px);
+  }
+
+  .footer-bottom-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+@media (min-width: 600px) and (max-width:1023px) {
+  .footer {
+  background-color:  #303978;
+  color: #fff;
+  font-family: sans-serif;
+    max-width: 1440px; // batas sesuai layout
+   margin: 0 auto;
+   margin-top: 100px;
+
+  .footer-top {
+  padding: 60px 124px;
+  background-color: #060C3C;
+
+  .footer-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 150px;
+  height: 1px;
+  background-color: #3f4676;
+}  
+  
+    .footer-top-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .left {
+        max-width: 600px;
+
+       h2 {
+ 
+  top: 64px;
+  left: 164px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0;
+  opacity: 1;
+}
+
+p {
+  top: 134px;
+  left: 164px;
+  width: 480px;
+  height: 56px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #B4B6C4;
+  opacity: 0.8;
+  margin-bottom: 0; // karena height sudah fix, biasanya ini direset
+}
+
+
+       .newsletter-form {
+  width: 480px;
+  height: 66px;
+  top: 222px;
+  left: 164px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 1;
+  transform: rotate(0deg); // sesuai angle: 0 deg
+  transform: translateY(40px);
+
+  .newsletter-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .newsletter-button {
+    background-color: #6c4af2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(7px) translateX(-7px);
+
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center;
+    vertical-align: bottom;
+
+    &:hover {
+      background-color: #593ad0;
+    }
+}
+        }
+    }
+.right {
+  position: relative; // Wajib biar .right img absolute-nya ngikut div ini
+
+  img {
+    position: absolute;
+    width: 500.14px;
+    height: 240.96px;
+
+    left: 50%; // posisinya berada di tengah horizontal
+    transform: translateY(-185px) translateX(-90px); // geser sedikit ke kiri, dan ke atas
+
+    // Bisa disesuaikan dengan:
+    // transform: translateX(150px); kalau mau lebih ke kanan
+  }
+}
+
+    }
+  }
+
+ .footer-bottom {
+  background-color: #060C3C;
+  padding: 60px 124px 30px;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 82%;            // agar lebih pendek
+    height: 1px;
+    background-color: #3f4676;
+    position: absolute;
+    top: 30px;             // atur turun dikit dari atas
+    left: 50%;
+    transform: translateX(-50%); // center secara horizontal
+  }
+
+
+    .footer-bottom-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 60px;
+      flex-wrap: wrap;
+
+      .footer-brand {
+  max-width: 280px;
+
+  p {
+    width: 344px;
+    color: #B4B6C4;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  p:nth-of-type(2) {
+    transform: translateY(5px); // geser ke atas dikit
+  }
+
+  p:nth-of-type(3) {
+    transform: translateY(0px); // bisa beda juga kalau mau
+  
+
+
+          img {
+            margin-right: 8px;
+            vertical-align: middle;
+          }
+        }
+
+       .logo-container {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 400px;
+  left: 162px;
+  padding: 3.13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25px;
+  opacity: 1;
+  transform: rotate(0deg); // angle: 0 deg
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  top: 400px;
+  left: 162px;
+  padding: 3.13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25px;
+  opacity: 1;
+  transform: rotate(0deg); // angle: 0 deg
+  box-sizing: border-box;
+}
+
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 120px;
+        transform: translateX(-30px) translateY(30px);
+
+      h4 {
+  width: 63px;
+  height: 20px;
+  top: 450px;
+  left: 726px;
+  color: #ffffff;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  margin-bottom: 12px;
+  opacity: 1;
+  transform: rotate(0deg);
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    width: 100%;
+    white-space: nowrap;
+    top: 486px;
+    left: 726px;
+    color: #B4B6C4;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0%;
+    vertical-align: bottom;
+    opacity: 1;
+    margin-bottom: 8px;
+    transform: rotate(0deg);
+    box-sizing: border-box;
+  }
+        }
+      }
+    }
+
+    .footer-bottom-bar {
+      margin-top: 40px;
+      border-top: 1px solid #3f4676;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-family: "Chivo", sans-serif;
+      font-weight: 400;
+      color: #d1d5db;
+
+      .socials img {
+        margin-left: 12px;
+        width: 18px;
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  position: relative;
+
+  .footer-left-decoration {
+    position: absolute;
+    width: 104px;
+    height: 194px;
+    top: 70px;
+    left: 9px;
+    z-index: 0;
+    transform: translateY(70px);
+  }
+
+  .footer-bottom-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+}
+@media (max-width: 599px) {
+  .footer {
+    margin-top: 60px;
+
+    .footer-top {
+      position: relative;
+      padding: 40px 20px;
+      text-align: center;
+      z-index: 1;
+
+      .footer-top-content {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .left {
+          position: relative;
+          z-index: 2;
+
+         h2 {
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+}
+
+
+        p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 16px 0;
+  color: #b4b6c4;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+          .newsletter-form {
+                   width: 100%;
+        max-width: 100%;
+        height: 66px;
+        border-radius: 6px;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        display: flex;
+        overflow: hidden;
+        box-sizing: border-box;
+        transform: translateY(40px);
+        position: relative;
+        z-index: 2;
+        transform: translateY(-250px) translateX(-150px);
+        margin-top: 100px;
+
+            .newsletter-input {
+              flex: 1;
+              border: none;
+              padding: 0 16px;
+              font-size: 16px;
+              outline: none;
+              color: #333;
+
+              &::placeholder {
+                color: #aaa;
+              }
+            }
+
+            .newsletter-button {
+              background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(7px) translateX(-37px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        white-space: nowrap;
+
+              &:hover {
+                background-color: #593ad0;
+              }
+            }
+          }
+        }
+
+       .right {
+  position: relative; // Wajib biar .right img absolute-nya ngikut div ini
+
+  img {
+    position: absolute;
+    width: 500.14px;
+    height: 240.96px;
+
+    left: 50%; // posisinya berada di tengah horizontal
+    transform: translateX(50px) translateY(-335px); // geser sedikit ke kiri, dan ke atas
+
+    // Bisa disesuaikan dengan:
+    // transform: translateX(150px); kalau mau lebih ke kanan
+  }
+}}
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #3f4676;
+        width: 90%;
+        margin: 40px auto 0;
+      }
+    }
+
+   .footer-bottom {
+  padding: 13px 9px 9px;
+
+      &::before {
+        display: none;
+      }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 9px;
+
+        .footer-brand {
+          .logo,
+          .logo-container {
+            position: static;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            transform: translateX(110px);
+          }
+
+          p {
+            width: 100%;
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              margin-right: 4px;
+            }
+
+            &:nth-of-type(2) {
+              margin-top: 12px;
+            }
+
+            &:nth-of-type(3) {
+              margin-top: 6px;
+            }
+          }
+        }
+
+    .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; // 👈 penting!
+  flex-wrap: wrap;
+  gap: 60px; // jarak antar kolom (bisa kamu sesuaikan)
+  width: 100%;
+  margin-top: 24px;
+  transform: translateX(20px);
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 160px; // bisa kamu atur sesuai isi
+    flex: 0 1 auto; // agar lebarnya sesuai isi
+    
+
+
+            h4 {
+              font-size: 14px;
+              margin-bottom: 8px;
+              color: #ffffff;
+            }
+
+            ul {
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 6px;
+                text-align: left;
+                color: #b4b6c4;
+              }
+            }
+          }
+        }
+      }
+
+     .footer-bottom-bar {
+  display: flex;
+  flex-direction: column; // arah vertikal
+  align-items: center;    // posisi horizontal di tengah
+  gap: 16px;
+  text-align: center;
+
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.8;
+  transform: translateY(-20px);
+
+       .socials {
+  display: flex;
+  justify-content: center; // ikon di tengah
+  align-items: center;
+  gap: 16px; // jarak antar ikon
+  
+  img {
+    width: 24px; // ukuran ikon lebih nyaman dilihat
+    height: 24px;
+    object-fit: contain;
+  }
+        }
+      }
+
+      .footer-left-decoration {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    margin-top: 60px;
+
+    .footer-top {
+      position: relative;
+      padding: 40px 20px;
+      text-align: center;
+      z-index: 1;
+
+      .footer-top-content {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .left {
+          position: relative;
+          z-index: 2;
+
+         h2 {
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+}
+
+
+        p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 16px 0;
+  color: #b4b6c4;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+          .newsletter-form {
+                   width: 100%;
+        max-width: 300px;
+        height: 66px;
+        border-radius: 6px;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        display: flex;
+        overflow: hidden;
+        box-sizing: border-box;
+        transform: translateY(40px);
+        position: relative;
+        z-index: 2;
+        transform: translateY(-250px) translateX(-150px);
+        margin-top: 100px;
+
+            .newsletter-input {
+              flex: 1;
+              border: none;
+              padding: 0 16px;
+              font-size: 16px;
+              outline: none;
+              color: #333;
+
+              &::placeholder {
+                color: #aaa;
+              }
+            }
+
+            .newsletter-button {
+              background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(7px) translateX(-37px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        white-space: nowrap;
+
+              &:hover {
+                background-color: #593ad0;
+              }
+            }
+          }
+        }
+
+       .right {
+  position: relative; // Wajib biar .right img absolute-nya ngikut div ini
+
+  img {
+    position: absolute;
+    width: 500.14px;
+    height: 240.96px;
+
+    left: 50%; // posisinya berada di tengah horizontal
+    transform: translateX(50px) translateY(-335px); // geser sedikit ke kiri, dan ke atas
+
+    // Bisa disesuaikan dengan:
+    // transform: translateX(150px); kalau mau lebih ke kanan
+  }
+}}
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #3f4676;
+        width: 90%;
+        margin: 40px auto 0;
+      }
+    }
+
+   .footer-bottom {
+  padding: 13px 9px 9px;
+
+      &::before {
+        display: none;
+      }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 9px;
+
+        .footer-brand {
+          .logo,
+          .logo-container {
+            position: static;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            transform: translateX(110px);
+          }
+
+          p {
+            width: 100%;
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              margin-right: 4px;
+            }
+
+            &:nth-of-type(2) {
+              margin-top: 12px;
+            }
+
+            &:nth-of-type(3) {
+              margin-top: 6px;
+            }
+          }
+        }
+
+    .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; // 👈 penting!
+  flex-wrap: wrap;
+  gap: 60px; // jarak antar kolom (bisa kamu sesuaikan)
+  width: 100%;
+  margin-top: 24px;
+  transform: translateX(20px);
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 160px; // bisa kamu atur sesuai isi
+    flex: 0 1 auto; // agar lebarnya sesuai isi
+    
+
+
+            h4 {
+              font-size: 14px;
+              margin-bottom: 8px;
+              color: #ffffff;
+            }
+
+            ul {
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 6px;
+                text-align: left;
+                color: #b4b6c4;
+              }
+            }
+          }
+        }
+      }
+
+     .footer-bottom-bar {
+  display: flex;
+  flex-direction: column; // arah vertikal
+  align-items: center;    // posisi horizontal di tengah
+  gap: 16px;
+  text-align: center;
+
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.8;
+  transform: translateY(-20px);
+
+       .socials {
+  display: flex;
+  justify-content: center; // ikon di tengah
+  align-items: center;
+  gap: 16px; // jarak antar ikon
+  
+  img {
+    width: 24px; // ukuran ikon lebih nyaman dilihat
+    height: 24px;
+    object-fit: contain;
+  }
+        }
+      }
+
+      .footer-left-decoration {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    margin-top: 60px;
+
+    .footer-top {
+      position: relative;
+      padding: 40px 20px;
+      text-align: center;
+      z-index: 1;
+
+      .footer-top-content {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        .left {
+          position: relative;
+          z-index: 2;
+
+         h2 {
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+}
+
+
+        p {
+  width: 100%;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 16px 0;
+  color: #b4b6c4;
+  text-align: center;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+          .newsletter-form {
+                   width: 100%;
+        max-width: 300px;
+        height: 66px;
+        border-radius: 6px;
+        background: #ffffff;
+        border: 1px solid #ddd;
+        display: flex;
+        overflow: hidden;
+        box-sizing: border-box;
+        transform: translateY(40px);
+        position: relative;
+        z-index: 2;
+        transform: translateY(-250px) translateX(-165px);
+        margin-top: 100px;
+
+            .newsletter-input {
+              flex: 1;
+              border: none;
+              padding: 0 16px;
+              font-size: 16px;
+              outline: none;
+              color: #333;
+
+              &::placeholder {
+                color: #aaa;
+              }
+            }
+
+            .newsletter-button {
+              background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 150px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(7px) translateX(-37px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        white-space: nowrap;
+
+              &:hover {
+                background-color: #593ad0;
+              }
+            }
+          }
+        }
+
+       .right {
+  position: relative; // Wajib biar .right img absolute-nya ngikut div ini
+
+  img {
+    position: absolute;
+    width: 500.14px;
+    height: 240.96px;
+
+    left: 50%; // posisinya berada di tengah horizontal
+    transform: translateX(50px) translateY(-335px); // geser sedikit ke kiri, dan ke atas
+
+    // Bisa disesuaikan dengan:
+    // transform: translateX(150px); kalau mau lebih ke kanan
+  }
+}}
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: #3f4676;
+        width: 90%;
+        margin: 40px auto 0;
+      }
+    }
+
+   .footer-bottom {
+  padding: 13px 9px 9px;
+
+      &::before {
+        display: none;
+      }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 9px;
+
+        .footer-brand {
+          .logo,
+          .logo-container {
+            position: static;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            transform: translateX(110px);
+          }
+
+          p {
+            width: 100%;
+            font-size: 14px;
+            line-height: 22px;
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            img {
+              margin-right: 4px;
+            }
+
+            &:nth-of-type(2) {
+              margin-top: 12px;
+            }
+
+            &:nth-of-type(3) {
+              margin-top: 6px;
+            }
+          }
+        }
+
+    .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; // 👈 penting!
+  flex-wrap: wrap;
+  gap: 60px; // jarak antar kolom (bisa kamu sesuaikan)
+  width: 100%;
+  margin-top: 24px;
+  transform: translateX(20px);
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 160px; // bisa kamu atur sesuai isi
+    flex: 0 1 auto; // agar lebarnya sesuai isi
+    
+
+
+            h4 {
+              font-size: 14px;
+              margin-bottom: 8px;
+              color: #ffffff;
+            }
+
+            ul {
+              padding: 0;
+              margin: 0;
+
+              li {
+                font-size: 14px;
+                line-height: 22px;
+                margin-bottom: 6px;
+                text-align: left;
+                color: #b4b6c4;
+              }
+            }
+          }
+        }
+      }
+
+     .footer-bottom-bar {
+  display: flex;
+  flex-direction: column; // arah vertikal
+  align-items: center;    // posisi horizontal di tengah
+  gap: 16px;
+  text-align: center;
+
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.8;
+  transform: translateY(-20px);
+
+       .socials {
+  display: flex;
+  justify-content: center; // ikon di tengah
+  align-items: center;
+  gap: 16px; // jarak antar ikon
+  
+  img {
+    width: 24px; // ukuran ikon lebih nyaman dilihat
+    height: 24px;
+    object-fit: contain;
+  }
+        }
+      }
+
+      .footer-left-decoration {
+        display: none;
+      }
+    }
+  }
+}

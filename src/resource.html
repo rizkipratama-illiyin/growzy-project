@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Growzy</title>
+    <meta
+      name="description"
+      content="A brief but compelling description of your website, around 150-160 characters."
+    />
+    <meta name="keywords" content="relevant, keywords, separated, by, commas" />
+    <meta name="author" content="Your Name or Company" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:site_name" content="Your Website Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Website Title" />
+    <meta
+      name="twitter:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
+
+    <!-- Favicon & Apple Icons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Start::Global Styles (used by all pages) -->
+    <link
+      href="assets/css/styles.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- End::Global Styles -->
+    <!-- Start::Page Styles (used by this page) -->
+    <link
+      href="assets/css/pages/home-v1.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Style css -->
+     <link rel="stylesheet" href="assets/scss/styles.css">
+          <link rel="stylesheet" href="assets/scss/styles.css.map">
+    <!-- end Style css -->
+    <!-- End::Page Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+<header class="navbar-wrapper">
+  <div class="navbar">
+    <div class="left-group">
+      <div class="logo">
+        <img src="./assets/media/images/Logo Fix.png" alt="Logo" />
+      </div>
+      <nav class="nav-links desktop-nav">
+        <a href="index.html">Pricing</a>
+        <a href="resource.html">Resources Center</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="nav-actions">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup">Sign Up</a>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileMenu">
+    <a href="index.html">Pricing</a>
+    <a href="resource.html">Resources Center</a>
+    <a href="#">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="login">Login</a>
+    <a href="#" class="signup">Sign Up</a>
+  </nav>
+</header>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    let isOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      if (!isOpen) {
+        mobileMenu.classList.add('showing');
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+        isOpen = true;
+      } else {
+        // Tutup menu
+        mobileMenu.style.height = '0px';
+        mobileMenu.classList.remove('showing');
+        isOpen = false;
+      }
+    });
+
+    // Biar nggak kaku pas resize
+    window.addEventListener('resize', () => {
+      if (isOpen) {
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+ <section class="resource-wrapper">
+    <div class="resource-container">
+      <div class="resource-text-content">
+        <h1>
+          With our resources
+          help your business
+          grow rapidly
+        </h1>
+        <p>Our books, guides, and others have helped thousands of your peers get better at their business</p>
+<div class="subscribe-wrapper">
+  <input type="email" placeholder="Your business email" class="subscribe-input">
+  <button class="subscribe-button">
+    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.5 19C15.9183 19 19.5 15.4183 19.5 11C19.5 6.58172 15.9183 3 11.5 3C7.08172 3 3.5 6.58172 3.5 11C3.5 15.4183 7.08172 19 11.5 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21.4999 21L17.1499 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Get Started
+  </button>
+</div>
+      </div>
+      <div class="resource-illustration">
+        <img src="./assets/media/images/sr1.png" alt="Business Graphic" />
+      </div>
+    </div>
+  </section>
+
+  <!-- HALAMAN 2 -->
+ <section class="resource-section">
+  <div class="card purple">
+    <img src="./assets/media/images/Bg.png" alt="Guides">
+    <div class="text">
+      <h3>Guides</h3>
+      <p>Everything you need to know our platform</p>
+      <a href="#">View All</a>
+    </div>
+  </div>
+  <div class="card pink">
+    <img src="./assets/media/images/Bg1.png" alt="Blog">
+    <div class="text">
+      <h3>Blog</h3>
+      <p>Our best tips for growing your business</p>
+      <a href="#">View All</a>
+    </div>
+  </div>
+  <div class="card yellow">
+    <img src="./assets/media/images/Bg2.png" alt="Webinars">
+    <div class="text">
+      <h3>Webinars</h3>
+      <p>Your all-access pass to exclusive content</p>
+      <a href="#">View All</a>
+    </div>
+  </div>
+  <div class="card green">
+    <img src="./assets/media/images/Bg3.png" alt="Customer Stories">
+    <div class="text">
+      <h3>Customer Stories</h3>
+      <p>See what Growzy success looks like</p>
+      <a href="#">View All</a>
+    </div>
+  </div>
+</section>
+
+<!-- Dot pagination: hanya muncul di mobile -->
+<div class="dot-pagination">
+  <div class="dot active"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector('.resource-section');
+    const dots = document.querySelectorAll('.dot');
+
+    if (!container || dots.length === 0) return;
+
+    container.addEventListener('scroll', () => {
+      const scrollLeft = container.scrollLeft;
+      const cardWidth = container.offsetWidth * 0.8 + 16; // 80% lebar + gap
+      const index = Math.round(scrollLeft / cardWidth);
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    });
+  });
+</script>
+
+  <!-- HALAMAN 3 -->
+   <section class="guides-section">
+  <div class="header">
+    <h1>Guides and Resources</h1>
+    <a href="#" class="view-all">View All</a>
+  </div>
+
+  <div class="guides-grid">
+    <!-- Kartu besar di kiri -->
+    <div class="guide-card large">
+  <img src="./assets/media/images/3a.jpg" alt="Guide Illustration" />
+  <div class="text">
+    <span class="label">Guides</span>
+
+    <!-- H2 untuk desktop -->
+    <h2 class="heading-desktop">How to eliminate tracking workarounds with Warehouse Con...</h2>
+
+    <!-- H2 untuk mobile -->
+    <h2 class="heading-mobile">Getting started with Guide for your help center: Setting up</h2>
+
+    <p>
+      Guide enables you to provide end users with a complete
+      self-service support option and empowers agents to better help customer
+    </p>
+    <a href="#" class="read-nowR">Read Now</a>
+  </div>
+</div>
+
+
+    <!-- Kolom kanan: 3 kartu kecil -->
+    <div class="right-column">
+      <div class="guide-card small">
+        <img src="./assets/media/images/2a.jpg" alt="Analytics Strategy" />
+        <div class="text">
+          <span class="label">Guides</span>
+          <h3>Advance your product analytics strategy</h3>
+          <a href="#" class="read-now">Read Now</a>
+        </div>
+      </div>
+
+      <div class="guide-card small">
+        <img src="./assets/media/images/4a.jpg" alt="Growzy Automation" />
+        <div class="text">
+          <span class="label">Guides</span>
+          <h3>A tour of Growzy automations</h3>
+          <a href="#" class="read-now">Read Now</a>
+        </div>
+      </div>
+
+      <div class="guide-card small">
+        <img src="./assets/media/images/1a.jpg" alt="Growzy Support" />
+        <div class="text">
+          <span class="label">Guides</span>
+          <h3>How to get support about Growzy with us</h3>
+          <a href="#" class="read-now">Read Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+   <!-- HALAMAN 4 -->
+    <section class="latest-blog-section">
+  <div class="container">
+    <div class="latest-blog-header">
+      <h2>Latest Blog</h2>
+      <a href="#">View All</a>
+    </div>
+    <div class="blog-cards">
+      <div class="blog-card">
+        <img src="./assets/media/images/Imager1.png" alt="Blog 1">
+        <p class="category">Blog</p>
+        <h3>How to eliminate tracking workarounds with Warehouse...</h3>
+        <a href="#" class="read-now">Read Now</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/media/images/Imager2.png" alt="Blog 2">
+        <p class="category">Blog</p>
+        <h3>6 Customer Metrics That Will Help You Grow Your Business</h3>
+        <a href="#" class="read-now">Read Now</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/media/images/Imager3.png" alt="Blog 3">
+        <p class="category">Blog</p>
+        <h3>The difference between product analytics and marketing</h3>
+        <a href="#" class="read-now">Read Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 5 -->
+ <section class="blog-section">
+  <div class="blog-container">
+    <div class="blog-header">
+      <h2 class="blog-title">Customer Story</h2>
+      <a href="#" class="blog-link">View All</a>
+    </div>
+    <div class="blog-list">
+      <div class="blog-card">
+        <img src="./assets/media/images/Imagerp1.png" alt="Blog 1" class="card-image">
+        <p class="card-category">Customer Story</p>
+        <h3 class="card-title">Watching movies provides the best user experience</h3>
+        <a href="#" class="card-read">Read Now</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/media/images/Imagerp2.png" alt="Blog 2" class="card-image">
+        <p class="card-category">Customer Story</p>
+        <h3 class="card-title">Providing reliable applications for productivity</h3>
+        <a href="#" class="card-read">Read Now</a>
+      </div>
+      <div class="blog-card">
+        <img src="./assets/media/images/Imagerp3.png" alt="Blog 3" class="card-image">
+        <p class="card-category">Customer Story</p>
+        <h3 class="card-title">Build an online business—no matter what business you're in</h3>
+        <a href="#" class="card-read">Read Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+  <footer class="footer">
+  <!-- Section Atas -->
+  <div class="footer-top">
+    <div class="footer-top-content">
+      <div class="left">
+        <h2>Ready to get started?</h2>
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+          <div class="newsletter-form">
+  <input type="email" placeholder="Your business email" class="newsletter-input">
+  <button class="newsletter-button">Get Started</button>
+</div>
+
+      </div>
+      <div class="right">
+        <img src="./assets/media/images/Pattern2.png" alt="decoration" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Bawah -->
+  <div class="footer-bottom">
+    <img src="./assets/media/images/Pattern.png" alt="kotak" class="footer-left-decoration" />
+    <div class="footer-bottom-content">
+      <div class="footer-brand">
+        <img src="./assets/media/images/Logo Footer.png" alt="Logo" class="logo" />
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+        <p><img src="./assets/media/images/Icon System.png" alt="email" /> hello@dhuhaCreative.com</p>
+        <p><img src="./assets/media/images/Slack.png" alt="slack" /> Join our slack community</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li>Landingpages</li>
+            <li>Pricing</li>
+            <li>Benefits</li>
+            <li>Features</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Partners</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li>Guides and resources</li>
+            <li>Blog</li>
+            <li>Tools</li>
+            <li>Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>© 2020 Growzy. All Right Reserved</p>
+      <div class="socials">
+        <img src="./assets/media/images/bx_bxl-instagram-alt.png" alt="Instagram" />
+        <img src="./assets/media/images/akar-icons_twitter-fill.png" alt="Twitter" />
+        <img src="./assets/media/images/akar-icons_linkedin-fill.png" alt="LinkedIn" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+
+
+
+ <!-- Start::Global Bundle Scripts (used by all pages) -->
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!-- End::Global Bundle Scripts -->
+    <!-- Start::Page Scripts (used by this page) -->
+    <script src="assets/js/pages/home.js"></script>
+    <!-- End::Page Scripts -->
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO Meta Tags -->
+    <title>Growzy</title>
+    <meta
+      name="description"
+      content="A brief but compelling description of your website, around 150-160 characters."
+    />
+    <meta name="keywords" content="relevant, keywords, separated, by, commas" />
+    <meta name="author" content="Your Name or Company" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Website Title" />
+    <meta
+      property="og:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta property="og:site_name" content="Your Website Name" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Your Website Title" />
+    <meta
+      name="twitter:description"
+      content="A brief but compelling description of your website."
+    />
+    <meta name="twitter:image" content="https://example.com/image.jpg" />
+    <meta name="twitter:site" content="@YourTwitterHandle" />
+    <meta name="twitter:creator" content="@YourTwitterHandle" />
+
+    <!-- Favicon & Apple Icons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Start::Global Styles (used by all pages) -->
+    <link
+      href="assets/css/styles.bundle.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- End::Global Styles -->
+    <!-- Start::Page Styles (used by this page) -->
+    <link
+      href="assets/css/pages/home-v1.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Style css -->
+     <link rel="stylesheet" href="assets/scss/styles.css">
+          <link rel="stylesheet" href="assets/scss/styles.css.map">
+    <!-- end Style css -->
+    <!-- End::Page Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+    <!-- IntlTelInput CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+  </head>
+  <body>
+<header class="navbar-wrapper">
+  <div class="navbar">
+    <div class="left-group">
+      <div class="logo">
+        <img src="./assets/media/images/Logo Fix.png" alt="Logo" />
+      </div>
+      <nav class="nav-links desktop-nav">
+        <a href="index.html">Pricing</a>
+        <a href="resource.html">Resources Center</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="nav-actions">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup">Sign Up</a>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileMenu">
+    <a href="index.html">Pricing</a>
+    <a href="resource.html">Resources Center</a>
+    <a href="#">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="login">Login</a>
+    <a href="#" class="signup">Sign Up</a>
+  </nav>
+</header>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    let isOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      if (!isOpen) {
+        mobileMenu.classList.add('showing');
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+        isOpen = true;
+      } else {
+        // Tutup menu
+        mobileMenu.style.height = '0px';
+        mobileMenu.classList.remove('showing');
+        isOpen = false;
+      }
+    });
+
+    // Biar nggak kaku pas resize
+    window.addEventListener('resize', () => {
+      if (isOpen) {
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+<!-- Halaman Contact -->
+ <section class="contact-section">
+  <div class="column left">
+  <h2 class="desktop-heading">Talk to our product analytics expert</h2>
+<h2 class="mobile-heading">Talk to our contact sales</h2>
+
+<p class="section-description desktop-description">
+  Have questions about pricing, plans, or Growxy? Fill out the form and our product analytics expert will be in touch directly.
+</p>
+<p class="section-description mobile-description">
+  Have questions about pricing, plans, or Growzy? Fill out the form and a product analytics expert will be in touch shortly.
+</p>
+
+
+   <h3 class="desktop-office-title">Our office</h3>
+<h3 class="mobile-office-title">Our office around the world</h3>
+    <!-- Gambar Canada - tampil di desktop -->
+<img src="./assets/media/images/Canada.png" alt="Office Image" class="office-image desktop-office-image" />
+
+<!-- Gambar France - hanya tampil di mobile -->
+<img src="./assets/media/images/Mask Group.png" alt="Office Image" class="office-image mobile-office-image" />
+<img src="./assets/media/images/co1.png" alt="Office Image" class="office-image mobile-office-image" />
+    <p class="desktop-description-only">
+  Have questions about pricing, plans, or Growxy? Fill out the form and our product analytics expert will be in touch directly.
+</p>
+
+
+    <div class="addresses">
+     <div class="address-block desktop-version">
+    <h4>United Kingdom</h4>
+    <p > <span class="icon-location"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25472)">
+<path d="M17.5005 8.33331C17.5005 14.1666 10.0005 19.1666 10.0005 19.1666C10.0005 19.1666 2.50049 14.1666 2.50049 8.33331C2.50049 6.34419 3.29066 4.43653 4.69719 3.03001C6.10371 1.62349 8.01136 0.833313 10.0005 0.833313C11.9896 0.833313 13.8973 1.62349 15.3038 3.03001C16.7103 4.43653 17.5005 6.34419 17.5005 8.33331Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.0005 10.8333C11.3812 10.8333 12.5005 9.71402 12.5005 8.33331C12.5005 6.9526 11.3812 5.83331 10.0005 5.83331C8.61978 5.83331 7.50049 6.9526 7.50049 8.33331C7.50049 9.71402 8.61978 10.8333 10.0005 10.8333Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25472">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg>
+</span>
+        50 Eastbourne Terrace<br>Paddington, London<br>W2 6LG, UK </p>
+    <p>
+        <a href="tel:+441234561081">
+            <span class="icon-phone">
+              <span class="icon-phone"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25468)">
+<path d="M18.3337 14.1V16.6C18.3346 16.8321 18.2871 17.0618 18.1941 17.2744C18.1011 17.4871 17.9648 17.678 17.7937 17.8349C17.6227 17.9918 17.4208 18.1112 17.201 18.1856C16.9811 18.2599 16.7482 18.2875 16.517 18.2666C13.9527 17.988 11.4895 17.1118 9.32535 15.7083C7.31187 14.4289 5.6048 12.7218 4.32535 10.7083C2.917 8.53432 2.04055 6.05914 1.76702 3.48331C1.74619 3.25287 1.77358 3.02061 1.84743 2.80133C1.92129 2.58205 2.03999 2.38055 2.19599 2.20966C2.35199 2.03877 2.54186 1.90224 2.75351 1.80875C2.96517 1.71526 3.19397 1.66686 3.42535 1.66665H5.92535C6.32977 1.66267 6.72184 1.80588 7.02849 2.06959C7.33513 2.3333 7.53542 2.69952 7.59202 3.09998C7.69754 3.90003 7.89323 4.68558 8.17535 5.44165C8.28747 5.73992 8.31174 6.06407 8.24527 6.37571C8.17881 6.68735 8.0244 6.9734 7.80035 7.19998L6.74202 8.25831C7.92831 10.3446 9.65573 12.072 11.742 13.2583L12.8004 12.2C13.0269 11.9759 13.313 11.8215 13.6246 11.7551C13.9363 11.6886 14.2604 11.7129 14.5587 11.825C15.3147 12.1071 16.1003 12.3028 16.9004 12.4083C17.3052 12.4654 17.6749 12.6693 17.9391 12.9812C18.2034 13.2931 18.3438 13.6913 18.3337 14.1Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25468">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg>
+            </span>+44 123 4561 081
+        </a>
+    </p>
+</div>
+
+<!-- Versi mobile (hanya muncul di layar kecil) -->
+<div class="address-block mobile-version">
+    <h4>Canada</h4>
+     <p > <span class="icon-location"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25472)">
+<path d="M17.5005 8.33331C17.5005 14.1666 10.0005 19.1666 10.0005 19.1666C10.0005 19.1666 2.50049 14.1666 2.50049 8.33331C2.50049 6.34419 3.29066 4.43653 4.69719 3.03001C6.10371 1.62349 8.01136 0.833313 10.0005 0.833313C11.9896 0.833313 13.8973 1.62349 15.3038 3.03001C16.7103 4.43653 17.5005 6.34419 17.5005 8.33331Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.0005 10.8333C11.3812 10.8333 12.5005 9.71402 12.5005 8.33331C12.5005 6.9526 11.3812 5.83331 10.0005 5.83331C8.61978 5.83331 7.50049 6.9526 7.50049 8.33331C7.50049 9.71402 8.61978 10.8333 10.0005 10.8333Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25472">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg>
+</span>
+5333 Avenue <br>
+ Casgrain <br>
+  Montréal, QC H2T <br>
+ 1X3 Canada
+    </p>
+    <p>
+        <a href="tel:8886704887">
+            <span class="icon-phone"><span class="icon-phone"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25468)">
+<path d="M18.3337 14.1V16.6C18.3346 16.8321 18.2871 17.0618 18.1941 17.2744C18.1011 17.4871 17.9648 17.678 17.7937 17.8349C17.6227 17.9918 17.4208 18.1112 17.201 18.1856C16.9811 18.2599 16.7482 18.2875 16.517 18.2666C13.9527 17.988 11.4895 17.1118 9.32535 15.7083C7.31187 14.4289 5.6048 12.7218 4.32535 10.7083C2.917 8.53432 2.04055 6.05914 1.76702 3.48331C1.74619 3.25287 1.77358 3.02061 1.84743 2.80133C1.92129 2.58205 2.03999 2.38055 2.19599 2.20966C2.35199 2.03877 2.54186 1.90224 2.75351 1.80875C2.96517 1.71526 3.19397 1.66686 3.42535 1.66665H5.92535C6.32977 1.66267 6.72184 1.80588 7.02849 2.06959C7.33513 2.3333 7.53542 2.69952 7.59202 3.09998C7.69754 3.90003 7.89323 4.68558 8.17535 5.44165C8.28747 5.73992 8.31174 6.06407 8.24527 6.37571C8.17881 6.68735 8.0244 6.9734 7.80035 7.19998L6.74202 8.25831C7.92831 10.3446 9.65573 12.072 11.742 13.2583L12.8004 12.2C13.0269 11.9759 13.313 11.8215 13.6246 11.7551C13.9363 11.6886 14.2604 11.7129 14.5587 11.825C15.3147 12.1071 16.1003 12.3028 16.9004 12.4083C17.3052 12.4654 17.6749 12.6693 17.9391 12.9812C18.2034 13.2931 18.3438 13.6913 18.3337 14.1Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25468">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg></span> 888-670-4887
+        </a>
+    </p>
+</div>
+      <div class="address-blockA">
+        <h4>France</h4>
+        <p > <span class="icon-location"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25472)">
+<path d="M17.5005 8.33331C17.5005 14.1666 10.0005 19.1666 10.0005 19.1666C10.0005 19.1666 2.50049 14.1666 2.50049 8.33331C2.50049 6.34419 3.29066 4.43653 4.69719 3.03001C6.10371 1.62349 8.01136 0.833313 10.0005 0.833313C11.9896 0.833313 13.8973 1.62349 15.3038 3.03001C16.7103 4.43653 17.5005 6.34419 17.5005 8.33331Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.0005 10.8333C11.3812 10.8333 12.5005 9.71402 12.5005 8.33331C12.5005 6.9526 11.3812 5.83331 10.0005 5.83331C8.61978 5.83331 7.50049 6.9526 7.50049 8.33331C7.50049 9.71402 8.61978 10.8333 10.0005 10.8333Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25472">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg>
+</span>260 Place Ernest Granier 34000 Montpellier France</p>
+        <p> 
+          <span class="icon-phone"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6458_25468)">
+<path d="M18.3337 14.1V16.6C18.3346 16.8321 18.2871 17.0618 18.1941 17.2744C18.1011 17.4871 17.9648 17.678 17.7937 17.8349C17.6227 17.9918 17.4208 18.1112 17.201 18.1856C16.9811 18.2599 16.7482 18.2875 16.517 18.2666C13.9527 17.988 11.4895 17.1118 9.32535 15.7083C7.31187 14.4289 5.6048 12.7218 4.32535 10.7083C2.917 8.53432 2.04055 6.05914 1.76702 3.48331C1.74619 3.25287 1.77358 3.02061 1.84743 2.80133C1.92129 2.58205 2.03999 2.38055 2.19599 2.20966C2.35199 2.03877 2.54186 1.90224 2.75351 1.80875C2.96517 1.71526 3.19397 1.66686 3.42535 1.66665H5.92535C6.32977 1.66267 6.72184 1.80588 7.02849 2.06959C7.33513 2.3333 7.53542 2.69952 7.59202 3.09998C7.69754 3.90003 7.89323 4.68558 8.17535 5.44165C8.28747 5.73992 8.31174 6.06407 8.24527 6.37571C8.17881 6.68735 8.0244 6.9734 7.80035 7.19998L6.74202 8.25831C7.92831 10.3446 9.65573 12.072 11.742 13.2583L12.8004 12.2C13.0269 11.9759 13.313 11.8215 13.6246 11.7551C13.9363 11.6886 14.2604 11.7129 14.5587 11.825C15.3147 12.1071 16.1003 12.3028 16.9004 12.4083C17.3052 12.4654 17.6749 12.6693 17.9391 12.9812C18.2034 13.2931 18.3438 13.6913 18.3337 14.1Z" stroke="#5D6180" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6458_25468">
+<rect width="20" height="20" fill="white" transform="translate(0.000488281)"/>
+</clipPath>
+</defs>
+</svg>
+</span><a href="tel:+33512128168">+33 5 12 12 81 68</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column right">
+  <form class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" placeholder="First Name" />
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" placeholder="Last Name" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="Email Address" />
+    </div>
+
+    <div class="form-group">
+      <label for="company">Company Name</label>
+      <input id="company" type="text" placeholder="Company Name" />
+    </div>
+
+   <div class="form-group">
+  <label for="phone">Phone Number</label>
+  <input id="phone" type="tel" placeholder="Phone Number" />
+</div>
+
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Message"></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+<!-- IntlTelInput JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<script>
+  const phoneInput = document.querySelector("#phone");
+  window.intlTelInput(phoneInput, {
+    initialCountry: "id", // bisa ganti default ke negara lain
+    preferredCountries: ["id", "us", "sg"],
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+  });
+</script>
+</section>
+
+<!-- FOOTER -->
+ <footer class="footer">
+  <!-- Section Atas -->
+  <div class="footer-top">
+    <div class="footer-top-content">
+      <div class="left">
+        <h2>Ready to get started?</h2>
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+          <div class="newsletter-form">
+  <input type="email" placeholder="Your business email" class="newsletter-input">
+  <button class="newsletter-button">Get Started</button>
+</div>
+
+      </div>
+      <div class="right">
+        <img src="./assets/media/images/Pattern2.png" alt="decoration" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Bawah -->
+  <div class="footer-bottom">
+    <img src="./assets/media/images/Pattern.png" alt="kotak" class="footer-left-decoration" />
+    <div class="footer-bottom-content">
+      <div class="footer-brand">
+        <img src="./assets/media/images/Logo Footer.png" alt="Logo" class="logo" />
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+        <p><img src="./assets/media/images/Icon System.png" alt="email" /> hello@dhuhaCreative.com</p>
+        <p><img src="./assets/media/images/Slack.png" alt="slack" /> Join our slack community</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li>Landingpages</li>
+            <li>Pricing</li>
+            <li>Benefits</li>
+            <li>Features</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Partners</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li>Guides and resources</li>
+            <li>Blog</li>
+            <li>Tools</li>
+            <li>Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>© 2020 Growzy. All Right Reserved</p>
+      <div class="socials">
+        <img src="./assets/media/images/bx_bxl-instagram-alt.png" alt="Instagram" />
+        <img src="./assets/media/images/akar-icons_twitter-fill.png" alt="Twitter" />
+        <img src="./assets/media/images/akar-icons_linkedin-fill.png" alt="LinkedIn" />
+      </div>
+    </div>
+  </div>
+</footer>
+ <!-- Start::Global Bundle Scripts (used by all pages) -->
+    <script src="assets/js/scripts.bundle.js"></script>
+    <!-- End::Global Bundle Scripts -->
+    <!-- Start::Page Scripts (used by this page) -->
+    <script src="assets/js/pages/home.js"></script>
+    <!-- End::Page Scripts -->
+  </body>
+</html>

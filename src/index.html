@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO Meta Tags -->
-    <title>Your Website Title</title>
+    <title>Growzy Website</title>
     <meta
       name="description"
       content="A brief but compelling description of your website, around 150-160 characters."
@@ -37,7 +37,7 @@
     <meta name="twitter:creator" content="@YourTwitterHandle" />
 
     <!-- Favicon & Apple Icons -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/media/images/Logo Fix.png" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -56,36 +56,435 @@
       rel="stylesheet"
       type="text/css"
     />
+    <!-- Style css -->
+     <link rel="stylesheet" href="assets/scss/styles.css">
+          <link rel="stylesheet" href="assets/scss/styles.css.map">
+    <!-- end Style css -->
     <!-- End::Page Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="page-wrapper">
-      <nav class="section">
-        <div class="padding-global padding-section-medium">
-          <div class="container-small">
-            <!-- Navbar Here -->
-          </div>
-        </div>
+<header class="navbar-wrapper">
+  <div class="navbar">
+    <div class="left-group">
+      <div class="logo">
+        <img src="./assets/media/images/Logo Fix.png" alt="Logo" />
+      </div>
+      <nav class="nav-links desktop-nav">
+        <a href="index.html">Pricing</a>
+        <a href="resource.html">Resources Center</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
-      <main class="main-wrapper">
-        <section>
-          <div class="padding-global padding-section-medium">
-            <div class="container-small">
-              <!-- Content Here -->
-               <h1>Test</h1>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="section">
-        <div class="padding-global padding-section-medium">
-          <div class="container-small">
-            <!-- Footer Here -->
-          </div>
-        </div>
-      </footer>
     </div>
 
+    <div class="nav-actions">
+      <a href="#" class="login">Login</a>
+      <a href="#" class="signup">Sign Up</a>
+      <div class="hamburger" id="hamburger">☰</div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-links mobile-nav" id="mobileMenu">
+    <a href="index.html">Pricing</a>
+    <a href="resource.html">Resources Center</a>
+    <a href="#">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" class="login">Login</a>
+    <a href="#" class="signup">Sign Up</a>
+  </nav>
+</header>
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('show');
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    let isOpen = false;
+
+    hamburger.addEventListener('click', () => {
+      if (!isOpen) {
+        mobileMenu.classList.add('showing');
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+        isOpen = true;
+      } else {
+        // Tutup menu
+        mobileMenu.style.height = '0px';
+        mobileMenu.classList.remove('showing');
+        isOpen = false;
+      }
+    });
+
+    // Biar nggak kaku pas resize
+    window.addEventListener('resize', () => {
+      if (isOpen) {
+        mobileMenu.style.height = mobileMenu.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
+
+
+
+<!-- HALAMAN 1 -->
+<section class="hero">
+    <div class="hero-left">
+      <h1>
+        We help any business<br />
+        to get analytics and<br />
+        <span class="highlight">sales marketing</span>
+      </h1>
+      <p class="desc">
+        The fastest and simple way to generate growing business solutions with our products
+      </p>
+      <div class="email-container">
+  <input type="email" placeholder="Your business email" class="email-input">
+  <button class="email-button">Get Started</button>
+</div>
+      <small>*we will not disseminate your email and so you avoid spam</small>
+      <div class="metrics">
+        <div>
+          <strong>350+</strong>
+          <p>Over 500 business powered with us</p>
+        </div>
+        <div>
+          <strong>4.8</strong>
+          <p>Rating on google play and app store</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="./assets/media/images/sampul.png" alt="Analytics Illustration" />
+    </div>
+  </section>
+
+  <!-- HALAMAN KE 2 -->
+
+ <section class="logo-bar">
+  <!-- Logo versi desktop (≥600px) -->
+  <div class="logo-container">
+    <img src="./assets/media/images/Microsoft.png" alt="Logo 1">
+    <img src="./assets/media/images/i2.png" alt="Logo 2">
+    <img src="./assets/media/images/I3.png" alt="Logo 3">
+    <img src="./assets/media/images/I4.png" alt="Logo 4">
+    <img src="./assets/media/images/I5.png" alt="Logo 5">
+    <img src="./assets/media/images/I6.png" alt="Logo 6">
+  </div>
+
+  <!-- Logo versi mobile (≤599px) -->
+  <div class="logo-mobile">
+    <img src="./assets/media/images/Microsoft 1.png" alt="Microsoft">
+    <img src="./assets/media/images/Partners.png" alt="Netflix">
+    <img src="./assets/media/images/Nike.png" alt="Nike">
+    <img src="./assets/media/images/Shopify.png" alt="Shopify">
+    <img src="./assets/media/images/slack (2).png" alt="Slack">
+    <img src="./assets/media/images/Intel.png" alt="Intel">
+  </div>
+</section>
+
+
+<!-- HALAMAN KE 3 -->
+ <section class="process-section">
+  <h2>How our platform process easy to use?</h2>
+  <div class="process-steps">
+    <!-- Step 1 -->
+    <div class="step">
+      <img src="./assets/media/images/Login1.png" alt="Step 1">
+      <h3>Login or sign up to be able use our platform</h3>
+      <p>
+        You must log in first to be able to use our platform to get your product analytics
+      </p>
+         <div class="line-divider">
+   <svg width="152" height="23" viewBox="0 0 152 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 14.8898C1 14.8898 32.5273 31.9742 65.7841 9.86125C99.0408 -12.2517 151 14.8898 151 14.8898" stroke="#6241D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 8"/>
+</svg>
+  </div>
+    </div>
+
+  
+
+    <!-- Step 2 -->
+<div class="step">
+  <picture>
+    <!-- Gambar khusus untuk layar kecil (max 599px) -->
+    <source media="(max-width: 599px)" srcset="./assets/media/images/Connect.png">
+    
+    <!-- Gambar default (desktop) -->
+    <img src="./assets/media/images/Connect2.png" alt="Step 2">
+  </picture>
+
+  <h3>Connect your website with just a few click</h3>
+  <p>
+    Select the application you wanted to be able to connect with just a few clicks
+  </p>
+  
+  <div class="line-divider">
+    <svg width="152" height="23" viewBox="0 0 152 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 9.92075C1 9.92075 33.6087 -11.0481 73.332 11.4185C113.055 33.8852 151 9.92075 151 9.92075" stroke="#6241D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 8"/>
+    </svg>
+  </div>
+</div>
+
+
+    
+
+    <!-- Step 3 -->
+    <div class="step">
+      <img src="./assets/media/images/Get Data3.png" alt="Step 3">
+      <h3>Take some sales data that you want</h3>
+      <p>
+        You already have sales data of your product with some variants you want
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 4 -->
+<section class="platform-section">
+  <div class="platform-container">
+    <div class="platform-image">
+      <img src="./assets/media/images/2.png" alt="Platform Overview">
+    </div>
+    <div class="platform-content">
+      <h2>The reasons to prefer choosing our platform</h2>
+      <p>Seamless integration of more than 20+ apps that can help analytics your product</p>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <img src="./assets/media/images/Chart.png" alt="Real time data icon">
+          <h4>Real time data</h4>
+          <p>Get the data you need to make smarter decisions.</p>
+        </div>
+        
+        <div class="feature-item">
+          <img src="./assets/media/images/Rocket.png" alt="Fast and Easy to use icon">
+          <h4>Fast and Easy to use</h4>
+          <p>Easily to convert API with just a few clicks</p>
+        </div>
+        
+        <div class="feature-item">
+          <img src="./assets/media/images/Security.png" alt="Safely Security icon">
+          <h4>Safely Security</h4>
+          <p>All customer data is encrypted</p>
+        </div>
+        
+        <div class="feature-item">
+          <img src="./assets/media/images/Dashboard.png" alt="Powerfull App icon">
+          <h4>Powerfull App</h4>
+          <p>Provide simple and minimalist dashboard</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 5 -->
+ <div class="features-section">
+  <div class="container">
+    
+    <!-- Kiri: Teks & Fitur -->
+    <div class="text-column">
+      <h2>We provide features<br />for your product</h2>
+
+      <div class="feature-box active">
+       <img src="./assets/media/images/Integrated1.png" alt="Icon" class="icon" />
+        <div class="content">
+          <h4>Integrated with Social Media</h4>
+          <p>Seamless integration of more than 20+ apps that can help analytics</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <div class="feature-box">
+       <img src="./assets/media/images/Sync2.png" alt="Icon" class="icon" />
+        <p class="dimmed">Always in synchronized</p>
+      </div>
+
+      <div class="feature-box">
+       <img src="./assets/media/images/Report3.png" alt="Icon" class="icon" />
+        <p class="dimmed">Powerful report</p>
+      </div>
+    </div>
+
+    <!-- Kanan: Ilustrasi -->
+    <div class="image-column">
+      <img src="./assets/media/images/3.png" alt="Dashboard Illustration" />
+    </div>
+  </div>
+</div>
+
+<!-- HALAMAN 6 -->
+<section class="global-section">
+  <div class="container">
+    <p class="subtitle">Global Scale</p>
+    <h2 class="title">Trusted by company<br />around the world</h2>
+
+    <div class="map-image">
+      <img src="./assets/media/images/vector.png" alt="World Map" />
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <h3>350+</h3>
+        <p>Over 500k business powered with us</p>
+      </div>
+      <div class="stat-item">
+        <h3>750k</h3>
+        <p>Users used our platform in around the world</p>
+      </div>
+      <div class="stat-item">
+        <h3>4.8</h3>
+        <p>Rating on google play and app store</p>
+      </div>
+      <div class="stat-item">
+        <h3>24+</h3>
+        <p>More than 30 countries trust our platform</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HALAMAN 7 -->
+ <section class="testimonial-section">
+  <div class="container">
+    <h2 class="testimonial-title">See what our customers<br />have to say about us</h2>
+
+    <div class="testimonial-cards">
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <picture class="testimonial-logo">
+          <source media="(max-width: 599px)" srcset="./assets/media/images/netflix3.png" />
+          <img src="./assets/media/images/logo-27.png" alt="Logo 1" />
+        </picture>
+        <p class="quote">“I’ve used Growzy at many companies before—it’s the go-to solution when you need user and product analytics.”</p>
+        <div class="author-info">
+          <img src="./assets/media/images/Profile.png" alt="Try Washington" class="avatar" />
+          <div class="author">
+            <span class="name">Try Washington</span>
+            <span class="position">CEO of Growify</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <picture class="testimonial-logo">
+          <source media="(max-width: 599px)" srcset="./assets/media/images/Microsoft3.png" />
+          <img src="./assets/media/images/logo-43.png" alt="Logo 2" />
+        </picture>
+        <p class="quote">“Uses Growzy as the source of truth for all its product data, and to determine where the team should focus its time.”</p>
+        <div class="author-info">
+          <img src="./assets/media/images/Profile2.png" alt="Cyntyta Rebecca" class="avatar" />
+          <div class="author">
+            <span class="name">Cyntyta Rebecca</span>
+            <span class="position">CEO of Savorly</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <picture class="testimonial-logo">
+          <source media="(max-width: 599px)" srcset="./assets/media/images/Shopify3.png" />
+          <img src="./assets/media/images/logo-55.png" alt="Logo 3" />
+        </picture>
+        <p class="quote">“Uses Growzy to get deeper user insights that could be easily shared among teams throughout the world, improving the company investment.”</p>
+        <div class="author-info">
+          <img src="./assets/media/images/profile3.png" alt="Derry Alasca" class="avatar" />
+          <div class="author">
+            <span class="name">Derry Alasca</span>
+            <span class="position purple">Manager of WellSphere</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+ <footer class="footer">
+  <!-- Section Atas -->
+  <div class="footer-top">
+    <div class="footer-top-content">
+      <div class="left">
+        <h2>Ready to get started?</h2>
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+          <div class="newsletter-form">
+  <input type="email" placeholder="Your business email" class="newsletter-input">
+  <button class="newsletter-button">Get Started</button>
+</div>
+
+      </div>
+      <div class="right">
+        <img src="./assets/media/images/Pattern2.png" alt="decoration" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Bawah -->
+  <div class="footer-bottom">
+    <img src="./assets/media/images/Pattern.png" alt="kotak" class="footer-left-decoration" />
+    <div class="footer-bottom-content">
+      <div class="footer-brand">
+        <img src="./assets/media/images/Logo Footer.png" alt="Logo" class="logo" />
+        <p>The fastest and simple way to generate growing business solutions with our products</p>
+        <p><img src="./assets/media/images/Icon System.png" alt="email" /> hello@dhuhaCreative.com</p>
+        <p><img src="./assets/media/images/Slack.png" alt="slack" /> Join our slack community</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li>Landingpages</li>
+            <li>Pricing</li>
+            <li>Benefits</li>
+            <li>Features</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li>About</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Partners</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li>Guides and resources</li>
+            <li>Blog</li>
+            <li>Tools</li>
+            <li>Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <p>© 2020 Growzy. All Right Reserved</p>
+      <div class="socials">
+        <img src="./assets/media/images/bx_bxl-instagram-alt.png" alt="Instagram" />
+        <img src="./assets/media/images/akar-icons_twitter-fill.png" alt="Twitter" />
+        <img src="./assets/media/images/akar-icons_linkedin-fill.png" alt="LinkedIn" />
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    
     <!-- Start::Global Bundle Scripts (used by all pages) -->
     <script src="assets/js/scripts.bundle.js"></script>
     <!-- End::Global Bundle Scripts -->

@@ -1,2 +1,6382 @@
 @import 'header';
 @import 'footer';
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden; /* Hindari scroll horizontal */
+}
+
+body {
+  font-family: 'Chivo';
+}
+
+// Mencegah overflow horizontal global
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Supaya semua box dihitung padding + border-nya
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// HALAMAN KE 1
+
+.hero {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-left h1 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700; /* Lebih tebal sesuai desain */
+  font-size: 52px;
+  line-height: 58px;
+  letter-spacing: 0;
+  color: #060C3C;
+  margin: 0;
+}
+
+.hero-left .desc {
+  max-width: 440px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5D6180;
+  margin: 0;
+}
+
+.email-container {
+  width: 480px;
+  height: 66px;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+
+  .email-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .email-button {
+  background-color: #6c4af2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(7px) translateX(-10px);
+
+  // Aturan teks sesuai layout
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: bottom;
+
+  &:hover {
+    background-color: #593ad0;
+  }
+}
+}
+
+.hero-left small {
+  font-family: 'Chivo', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #5D6180;
+  margin: 0;
+}
+
+.hero-left .metrics {
+  display: flex;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.hero-left .metrics strong {
+  font-family: 'Chivo', sans-serif;
+  font-size: 44px;
+  line-height: 54px;
+  color: #060C3C;
+}
+
+.hero-left .metrics p {
+  max-width: 180px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  color: #5D6180;
+  margin: 0;
+}
+
+.hero-right {
+  max-width: 500px;
+  flex: 1;
+  text-align: right;
+}
+
+.hero-right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding: 60px 32px;
+    gap: 32px;
+  }
+
+  .hero-left {
+    width: 50%;
+    gap: 16px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .hero-left .desc {
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 100%;
+  }
+
+  .email-container {
+    width: 100%;
+    max-width: 100%;
+
+    .email-input {
+      padding: 0 14px;
+      font-size: 15px;
+    }
+
+    .email-button {
+      width: 140px;
+      font-size: 15px;
+      transform: translateY(7px) translateX(-8px);
+    }
+  }
+
+  .hero-left .metrics {
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .hero-left .metrics strong {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero-left .metrics p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .hero-right {
+    max-width: 50%;
+  }
+
+  .hero-right img {
+    width: 1200px;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 599px) and (max-width: 767px) {
+  .hero {
+    padding: 40px 24px;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center; /* ✅ Ganti dari flex-start ke center */
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1 {
+      font-size: 50px;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .desc {
+      font-size: 17px;
+      line-height: 26px;
+      color: #5D6180;
+      text-align: center;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .email-container {
+      width: 100%;
+      max-width: 460px;
+      height: 64px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin: 0 auto;
+      display: flex;
+
+      .email-input {
+        flex: 1;
+        padding: 0 16px;
+        font-size: 15px;
+
+        &::placeholder {
+          color: #aaa;
+        }
+      }
+
+      .email-button {
+        width: 140px;
+        height: 50px;
+        font-size: 15px;
+        transform: translateY(7px) translateX(-8px);
+      }
+    }
+
+    small {
+      display: block;
+      width: 100%;
+      max-width: 460px;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: left;
+      color: #5D6180;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    .metrics {
+      margin-top: 24px;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      display: flex;
+
+      strong {
+        font-size: 36px;
+        line-height: 44px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 160px;
+      }
+    }
+  }
+
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* ✅ Pusat horizontal */
+    align-items: center;     /* ✅ Pusat vertikal jika perlu */
+    text-align: center;
+  }
+
+  .hero-right img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+@media (max-width: 599px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .hero-left {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+
+   h1 {
+  width: 343px;
+  height: 114px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #060C3C;
+  margin: 0 auto;
+}
+
+.desc {
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      color: #5D6180;
+    }
+ 
+  .email-container {
+    width: 327px;
+    height: 64px;
+    border-radius: 6px;
+    border-width: 1px;
+    box-sizing: border-box;
+
+    
+  .email-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .email-button {
+  background-color: #6c4af2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(7px) translateX(-7px);
+
+  // Aturan teks sesuai layout
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #593ad0;
+  }}
+}
+
+   small {
+  display: block;
+  width: 327px;
+  height: 42px;
+  margin: 10px auto 0; // auto untuk center horizontal
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px; // 150% dari 14px
+  letter-spacing: 0;
+  text-align: left;
+  color: #5D6180;
+}
+
+
+    .metrics {
+     display: none;
+      }
+  }
+
+  .hero-right {
+    width: 100%;
+    text-align: center;
+
+    img {
+       width: 100%;
+  max-width: 463px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 371px) {
+  .hero-left {
+    h1 {
+      font-size: 26px;
+      line-height: 32px;
+      width: 100%;
+    }
+
+    .desc {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 10px;
+    }
+
+    .email-container {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+
+      
+  .email-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+    font-size: 13px;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .email-button {
+ background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex
+;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-20px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        vertical-align: bottom;
+        white-space: nowrap;
+
+  &:hover {
+    background-color: #593ad0;
+  }}
+    }
+
+    small {
+    display: block;
+    width: 100%;
+    max-width: 327px;
+    height: auto; // fleksibel jika teks membungkus
+    margin: 10px auto 0;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px; // 150% dari 14px
+    letter-spacing: 0;
+    text-align: left;
+    color: #5D6180;
+    padding: 0 10px; // biar nggak nempel pinggir layar
+    box-sizing: border-box;
+    }
+  }
+
+  .hero-right {
+    img {
+  max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 30px;
+    }
+  }
+}
+
+
+// HALAMAN KE 2
+
+.logo-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff; /* background putih */
+  padding: 70px 0; /* padding atas-bawah */
+  transform: translateY(-20px);
+}
+
+.logo-container {
+  width: 1112px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* jarak antar logo */
+}
+
+.logo-container img {
+  max-height: 40px;
+  object-fit: contain;
+  opacity: 0.6; /* warna abu seperti contoh */
+}
+
+.logo-mobile {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo-bar {
+    padding: 60px 0;
+    transform: translateY(-10px); // supaya nggak terlalu naik di layar kecil
+  }
+
+  .logo-container {
+    width: 100%;
+    padding: 0 20px;
+    flex-wrap: wrap;         // biar kalau nggak muat bisa turun ke baris baru
+    justify-content: center; // tetap di tengah
+    gap: 32px;
+  }
+
+  .logo-container img {
+    max-height: 36px; // sedikit lebih kecil
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  .logo-container {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // 4 kolom
+    gap: 24px 12px;
+    padding: 20px 24px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      max-width: 100px;
+      height: auto;
+      object-fit: contain;
+      opacity: 0.7;
+    }
+
+    // Baris ke-2 (logo ke-5 dan ke-6)
+    img:nth-child(5) {
+      grid-column: 2 / 3; // taruh di kolom ke-2
+    }
+
+    img:nth-child(6) {
+      grid-column: 3 / 4; // taruh di kolom ke-3
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .logo-container {
+    display: none; // Sembunyikan versi desktop di mobile
+  }
+
+ .logo-mobile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 327px;
+  gap: 16px 16px; // jarak antar logo (baris dan kolom)
+  transform: rotate(0deg);
+  opacity: 1;
+
+  img {
+    width: 98px;
+    height: 26px;
+    object-fit: contain;
+    opacity: 0.6;
+  }
+
+  // Baris ke-2: geser dikit ke kiri biar gak terlalu simetris
+  img:nth-child(n+4) {
+    transform: translateX(-8px); // offset kiri
+   }
+ }
+}
+
+@media (max-width: 371px) {
+  .logo-mobile {
+    width: 100%;
+    gap: 12px 12px; // sedikit lebih rapat biar muat
+
+    img {
+      width: 90px; // lebih kecil dari 98px
+      height: 24px; // sesuaikan proporsional
+    }
+
+    img:nth-child(n+4) {
+      transform: translateX(-6px); // offset juga dikurangi biar pas
+    }
+  }
+}
+
+
+// HALAMAN 3
+
+.process-section {
+  max-width: 1112px;
+  height: 524px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ h2 {
+    width: 536px;
+    height: 108px;
+    margin: 0 auto 50px auto; // rata tengah
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #fff; // teks putih agar kontras
+    color: #060C3C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; // opsional
+  }
+
+
+  .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; // agar responsive di bawah 1024px
+
+ 
+    .step {
+  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  img {
+    width: 248px;
+    height: 180px;
+    object-fit: contain;
+  }
+
+
+
+      h3 {
+  width: 248px;
+  height: 64px;
+  margin: 0 auto 10px auto; // rata tengah
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #fff; /* putih agar terlihat di background gelap */
+  color: #060C3C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px; // opsional
+}
+
+
+     p {
+  width: 255px;
+  height: 84px;
+  margin: 0 auto;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff; /* agar kontras dengan background */
+  color: #5D6180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 6px; /* opsional */
+}
+    }
+  }}
+
+  @media (max-width: 1024px) {
+    .process-steps {
+      justify-content: center;
+    }
+  }
+
+
+.line-divider {
+  width: 150px;  // sesuai layout
+  height: 20px;  // sesuai layout
+  opacity: 1;
+  flex-shrink: 0; // agar tidak mengecil saat flex
+
+  path {
+    stroke: #6241D4;
+    stroke-width: 2;
+    stroke-dasharray: 4 8; // sesuai layout
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+}
+.line-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 20px;
+
+  svg {
+    display: block;
+    width: 150px;
+    height: 120px;
+    transform: translateY(-300px) translateX(200px);
+
+    path {
+      stroke: #6241D4;
+      stroke-width: 2;
+      stroke-dasharray: 4 8;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+}
+
+.step {
+  .desktop-img {
+    display: block;
+
+    @media (max-width: 599px) {
+      display: none;
+    }
+  }
+
+  .mobile-img {
+    display: none;
+
+    @media (max-width: 599px) {
+      display: block;
+    }
+  }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  .process-section {
+    height: auto;
+    padding: 40px 20px;
+
+    h2 {
+      width: 100%;
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 40px;
+      padding: 0 10px;
+    }
+
+    .process-steps {
+      gap: 32px;
+      justify-content: center;
+    }
+
+    .step {
+      max-width: 280px;
+
+      img {
+        width: 220px;
+        height: auto;
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 30px;
+        height: auto;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        height: auto;
+      }
+    }
+  }
+
+  .line-divider {
+    svg {
+     display: none;
+    }
+  }
+}
+
+@media (min-width: 599px) and (max-width: 767px) {
+  .process-section {
+    padding: 40px 24px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      font-size: 35px;
+      line-height: 36px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+  }
+
+  .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; // agar responsive di bawah 1024px
+    display: flex;
+flex-direction: column;
+align-items: center;
+  }
+
+ 
+    .step {
+  flex: 1;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  img {
+  width: 500px !important;
+  height: 100% !important;
+  object-fit: contain;
+  top: 1183px;
+  left: 64px;
+  opacity: 1;
+  }
+
+ 
+     h3 {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 auto 10px auto;
+        font-family: "Chivo", sans-serif;
+        font-weight: 400;
+        font-size: 30px !important;
+        line-height: 24px;
+        letter-spacing: 0;
+        text-align: center;
+        color: #060C3C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        max-width: 100% !important;
+}
+
+    p {
+    font-size: 20px !important;
+        line-height: 24px;
+        width: 100% !important;
+        max-width: 100%;
+        padding: 0 10px;
+        transform: translateY(-30px);
+    }
+  }
+
+  .line-divider {
+    width: 170px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      transform: rotate(90deg) translateX(20px);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+}
+
+
+@media (max-width: 599px) {
+  .process-section {
+    padding: 40px 20px;
+    height: auto;
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+
+    h2 {
+     width: 337px;
+    height: 64px;
+    margin: 0 auto 30px auto;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-align: center;
+    }
+
+   
+  .process-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap; // agar responsive di bawah 1024px
+    display: flex;
+flex-direction: column;
+align-items: center;
+
+
+ 
+    .step {
+  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+
+  img {
+    width: 248px;
+  height: 180px;
+  object-fit: contain;
+  top: 1183px;
+  left: 64px;
+  opacity: 1;
+  transform: translateX(10px);
+  }
+
+       h3 {
+ width: 248px;
+  height: auto; // biar menyesuaikan konten
+  margin: 0 auto 10px auto;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #060C3C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px; // opsional
+  transform: translateX(10px);
+}
+
+
+     p {
+  width: 327px;
+  height: 52px;
+  margin: 0 auto;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #5D6180;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  border-radius: 6px;
+   transform: translateY(-10px);
+}}
+    }
+
+    .line-divider {
+      width: 90px;
+      height: 50px; // kasih tinggi agar divider tidak mepet
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        transform: none;
+        transform: translateY(0px) rotate(90deg) translateX(20px);
+      }
+    }
+  }
+}
+
+@media (max-width: 371px) {
+  .process-section {
+    padding: 30px 16px;
+    height: auto;
+
+    h2 {
+      width: 100%;
+      font-size: 22px;
+      line-height: 30px;
+      margin: 0 auto 24px auto;
+    }
+
+    .process-steps {
+      gap: 32px;
+      flex-direction: column;
+      align-items: center;
+
+      .step {
+        max-width: 100%;
+        min-width: 100%;
+        gap: 16px;
+
+        img {
+          width: 220px;
+          height: auto;
+          transform: translateX(0);
+        }
+
+        h3 {
+          width: 100%;
+          font-size: 16px;
+          line-height: 22px;
+          transform: translateX(0);
+        }
+
+        p {
+          width: 100%;
+          font-size: 14px;
+          line-height: 22px;
+          padding: 0 8px;
+          transform: translateY(-10px);
+        }
+      }
+    }
+
+    .line-divider {
+      width: 70px;
+      height: 40px;
+
+      svg {
+        transform: rotate(90deg) translateX(12px);
+      }
+    }
+  }
+
+  // khusus ganti gambar Step 2
+  .desktop-img {
+    display: none;
+  }
+
+  .mobile-img {
+    display: block;
+  }
+}
+
+
+// HALAMAN 4
+.platform-section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: auto; // opsional, tergantung isinya
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin-top: 100px;
+
+ .platform-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+
+.platform-image {
+  flex: none; // supaya tidak ikut stretch oleh flex
+  width: 536px;
+  height: 545px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+
+.platform-content {
+  flex: none; // agar tidak melar, seperti layout tetap
+  width: 480px;
+  height: 548px;
+  position: relative; // hanya jika kamu ingin pakai top/left (optional)
+  top: 0; // tidak wajib, kecuali kamu pakai absolute
+  left: 0;
+
+  h2 {
+    width: 479px;
+    height: 108px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0;
+    color: #ffffff;
+    color: #060C3C;
+    padding: 16px 24px;
+    border-radius: 8px; // opsional biar nggak terlalu kaku
+    transform: translateX(-10px) translateY(-50px);
+  }
+  p {
+    width: 395px;
+    height: 48px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #ffffff;
+    color: #5D6180;
+    padding: 10px 16px;
+    border-radius: 6px; // opsional
+    margin-bottom: 25px;
+    transform: translateY(-10px);
+  }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+     .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+    object-fit: contain; // menjaga proporsional gambar
+    transform: translateX(10px);
+  }
+
+
+        h4 {
+             width: 220px;
+      height: 32px;
+      font-family: 'Chivo', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+      color: #ffffff;
+      color: #060C3C;
+      padding: 4px 8px;
+      margin: 0 0 4px;
+      border-radius: 4px; // opsional
+      white-space: nowrap;
+        }
+
+        p {
+           width: 220px;
+      height: 52px;
+      font-family: 'Chivo', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      color: #ffffff;
+      color: #5D6180;
+      padding: 8px 12px;
+      border-radius: 6px; // opsional untuk tampilan lebih halus
+      margin: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1100px) and (min-width: 1024px) {
+  .platform-section {
+    padding: 40px 20px;
+    margin-top: 80px;
+
+    .platform-container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .platform-image {
+      width: 48%;
+      max-width: 480px;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .platform-content {
+      width: 48%;
+      max-width: 480px;
+      height: auto;
+
+      h2 {
+        font-size: 38px;
+        line-height: 48px;
+        padding: 16px 0;
+        margin-bottom: 12px;
+        transform: none;
+      }
+
+      > p {
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 24px;
+        padding: 0;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        .feature-item {
+          h4 {
+            font-size: 18px;
+            line-height: 26px;
+            padding: 4px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 6px;
+          }
+
+          img {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 767px) {
+  @media screen and (max-width: 1023px) and (min-width: 767px) {
+  .platform-section {
+    padding: 40px 20px;
+    margin-top: 80px;
+
+    .platform-container {
+      flex-direction: row;
+      align-items: center; // tetap tengah
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .platform-image {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .platform-content {
+      width: 50%;
+      max-width: 450px;
+
+      h2 {
+        font-size: 36px;
+        line-height: 48px;
+        padding: 16px;
+        transform: none;
+      }
+
+      > p {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        .feature-item {
+          img {
+            width: 32px;
+            height: 32px;
+            transform: none;
+          }
+
+          h4 {
+            font-size: 18px;
+            line-height: 26px;
+            padding: 4px;
+            max-width: 20px;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+            padding: 6px;
+            max-width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .platform-section {
+    padding: 40px 20px;
+
+    .platform-container {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .platform-image {
+      width: 45%;
+      height: auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .platform-content {
+      width: 50%;
+      height: auto;
+
+      h2 {
+        font-size: 32px;
+        line-height: 42px;
+        transform: none;
+        padding: 12px 0;
+        margin-bottom: 10px;
+      }
+
+      > p {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 0;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+    }
+  }
+}
+
+
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .platform-section {
+    padding: 40px 20px;
+    margin-top: 60px;
+
+    .platform-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 0;
+    }
+
+    .platform-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   // horizontal center
+  justify-content: center; // vertical center jika punya tinggi
+  text-align: center;    // pastikan isi teks juga rata tengah
+}
+
+
+    .platform-image {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 320px;
+        height: auto;
+        object-fit: contain;
+        transform: translateY(110px); // agak turun sedikit
+      }
+    }
+
+    .platform-content {
+      width: 100%;
+      height: auto;
+
+      h2 {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: 0;
+        text-align: center;
+        padding: 8px 12px;
+        transform: translateY(-440px);
+      }
+
+      h2 + p {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+        letter-spacing: 0;
+        text-align: center;
+        transform: translateY(-510px);
+        margin-bottom: 36px;
+        padding: 6px 12px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        padding: 6px 12px;
+        transform: none;
+        margin-bottom: 30px;
+      }
+
+      .features-grid {
+  display: grid;
+  transform: none; // hilangkan translateY kalau tidak diperlukan
+  transform: translateY(-150px);
+
+  .feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 16px;
+
+    img {
+      margin-bottom: 12px;
+      transform: none; // hapus translateX biar rapi
+    }
+
+    h4 {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 0;
+      text-align: left;
+      transform: none;
+    }
+
+    p {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      width: 100%;
+      max-width: 100%;
+      padding: 4px 0;
+      text-align: left;
+      transform: none;
+    }
+  }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .platform-section {
+    padding: 40px 20px;
+    margin-top: 60px;
+
+    .platform-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 0;
+    }
+
+   .platform-image {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center; // Horizontal center
+  align-items: center;     // Vertical align (optional)
+
+  img {
+    width: 327px;
+    height: 318px;
+    object-fit: contain;
+    transform: translateY(120px); // Bisa sesuaikan kalo butuh naik turun
+  }
+}
+
+
+    .platform-content {
+      width: 100%;
+      height: auto;
+
+    h2 {
+  width: 100%;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 8px 12px;
+  transform: translateY(-450px);
+}
+
+
+      // Reset semua p
+      p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        padding: 6px 12px;
+        transform: none;
+        margin-bottom: 30px;
+      }
+
+      // 🎯 Ini hanya target p deskripsi (p pertama setelah h2)
+      h2 + p {
+      font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: center;
+  transform: translateY(-500px);
+  margin-bottom: 40px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 0px;
+        transform: translateY(-150px);
+
+        .feature-item {
+          align-items: center;
+          text-align: center;
+
+          img {
+            margin: 0 auto 12px;
+            transform: none;
+            transform: translateX(-120px) translateY(70px)
+          }
+
+     h4 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  width: 220px;
+  height: 24px;
+  top: 2961px;
+  left: 89px;
+  opacity: 1;
+  padding: 4px 8px;
+  text-align: left;
+  max-width: 250px;
+  transform: translateX(30px);
+}
+
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  width: 100%;
+  max-width: 250px;
+  padding: 4px 8px;
+  text-align: left;
+  transform: translateX(45px);
+}
+
+        }
+      }
+    }
+  }
+}
+@media (max-width: 345px) {
+  .platform-section {
+    .platform-content {
+      h2 {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 6px 10px;
+        text-align: center;
+        transform: translateY(-450px); // Sesuaikan jika perlu
+      }
+
+      h2 + p {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 6px 10px;
+        text-align: center;
+        transform: translateY(-490px); // Sesuaikan jika perlu
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+
+
+// HALAMAN 5
+.features-section {
+  width: 100%;
+  height: 549px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+
+  .container {
+  width: 1140px;
+  margin: 0 auto; /* tengahin konten */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* sejajarkan vertikal */
+  padding: 0 60px;
+  gap: 60px;
+  padding-top: 100px;
+}
+
+
+  .text-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 54px;
+    color: #060C3C;
+    margin-bottom: 30px;
+    max-width: 480px;
+  }
+
+
+  .feature-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    opacity: 1;
+    display: block;
+  }
+
+  &:nth-child(1) .icon {
+  transform: translateX(0px);
+  }
+
+  &:nth-child(2) .icon {
+ transform: translateX(0px) translateY(0px);
+  }
+
+  &:nth-child(3) .icon {
+    transform: translateX(20px);
+  }
+
+    &:nth-child(4) .icon {
+    transform: translateX(20px);
+  }
+
+
+
+      .content {
+       h4 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #060C3C;
+  margin-bottom: 50px;
+  transform: translateY(-20px);
+}
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #5D6180;
+  max-width: 360px;
+  transform: translateY(-70px);
+}
+
+
+      a {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6241D4;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 8px;
+  transform: translateY(-80px);
+
+  &:hover {
+    text-decoration: underline; // Tetap, tapi bisa ditambah efek lain jika mau
+  }
+}
+
+      }
+
+      .dimmed {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  color: #B4B6C4;
+  max-width: 352px;
+  transform: translateX(20px) translateY(-10px);
+}
+    }
+
+ .feature-box.active {
+  background-color: #ffffff;
+  padding: 16px; // ini bisa tetap, tergantung kebutuhan isi
+  border-radius: 12px;
+  width: 480px;
+  height: 176px;
+  box-shadow: 0px 8px 40px -2px rgba(6, 12, 59, 0.08); // konversi #060C3B14
+}
+
+  }
+
+.image-column {
+  width: 557px;
+  height: 564px;
+  position: relative; // atau absolute kalau memang perlu offset dari atas/kiri
+  top: 1px;
+  left: -21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%; // agar pas dengan 557px
+    height: auto;
+    display: block;
+  }
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 767px) {
+  .features-section {
+    padding-top: 80px;
+    height: auto;
+
+    .container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 0 30px;
+    }
+
+    .text-column {
+      flex: 1;
+
+      h2 {
+        font-size: 36px;
+        line-height: 48px;
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
+
+      .feature-box {
+        gap: 12px;
+        margin-bottom: 20px;
+
+        .icon {
+          width: 32px;
+          height: 32px;
+        }
+
+        .content {
+          h4 {
+            font-size: 20px;
+            line-height: 28px;
+            transform: none;
+            margin-bottom: 8px;
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 24px;
+            transform: none;
+          }
+
+          a {
+            font-size: 15px;
+            line-height: 20px;
+            margin-top: 6px;
+            transform: none;
+          }
+        }
+
+        .dimmed {
+          font-size: 20px;
+          line-height: 28px;
+          transform: none;
+          transform: translateY(-20px) translateX(30px);
+        }
+      }
+
+      .feature-box.active {
+        width: 100%;
+        height: auto;
+        padding: 16px;
+      }
+    }
+
+    .image-column {
+      width: 45%;
+      max-width: 400px;
+      height: auto;
+      left: 0;
+      top: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  .features-section {
+    padding-top: 80px;
+
+    .container {
+      flex-direction: column;
+      padding: 0 32px;
+      gap: 48px;
+      transform: translateY(60px);
+    }
+
+    .image-column {
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 400px;
+        height: auto;
+        transform: translateY(-400px);
+      }
+    }
+
+    .text-column {
+      align-items: flex-start;
+      text-align: left;
+
+      h2 {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 40px;
+        letter-spacing: 0;
+        text-align: center;
+        margin: 0 auto 24px;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .feature-box {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 28px;
+        width: 100%;
+        transform: translateY(390px);
+      }
+
+      .icon {
+        width: 30px !important;
+        height: 30px !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
+      .feature-box:nth-child(2) .icon {
+        transform: translateX(0px) translateY(0px) !important;
+      }
+
+      .feature-box:nth-child(3) .icon,
+      .feature-box:nth-child(4) .icon {
+        transform: translateX(16px) translateY(4px) !important;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          font-family: 'Chivo', sans-serif !important;
+          font-weight: 400 !important;
+          font-size: 18px !important;
+          line-height: 24px !important;
+          width: 100% !important;
+          margin: 0 auto 4px !important;
+          transform: none !important;
+          text-align: left !important;
+        }
+
+        p {
+          font-family: 'Chivo', sans-serif !important;
+          font-weight: 400 !important;
+          font-size: 14px !important;
+          line-height: 24px !important;
+          width: 100% !important;
+          margin: 0 !important;
+          transform: none !important;
+          text-align: left !important;
+        }
+
+        a {
+          font-family: 'Chivo', sans-serif !important;
+          font-weight: 400 !important;
+          font-size: 16px !important;
+          line-height: 22px !important;
+          text-decoration: underline solid !important;
+          text-decoration-thickness: 0% !important;
+          width: auto !important;
+          margin-top: 6px !important;
+          transform: none !important;
+          opacity: 1 !important;
+          white-space: nowrap;
+        }
+      }
+
+      .dimmed {
+        font-family: 'Chivo', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 18px !important;
+        line-height: 24px !important;
+        transform: translateX(30px) translateY(-10px) !important;
+        color: #B4B6C4 !important;
+        opacity: 1 !important;
+      }
+
+      .feature-box.active {
+        width: 100%;
+        height: 180px;
+        padding: 16px;
+        transform: translateY(400px);
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .features-section {
+    padding-top: 60px;
+
+    .container {
+      flex-direction: column;
+      padding: 0 24px;
+      gap: 40px;
+      transform: translateY(50px);
+    }
+
+    .image-column {
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: auto;
+        transform: translateY(-400px);
+      }
+    }
+
+    .text-column {
+      align-items: flex-start;
+      text-align: left;
+
+     h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0;
+  text-align: center;
+  margin: 0 auto 24px;
+  width: 327px;
+  max-width: 100%;
+}
+
+
+      .feature-box {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 24px;
+        transform: none;
+        width: 100%;
+        transform: translateY(380px);
+      }
+
+     .icon {
+  width: 30px !important;
+  height: 30px !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+      .feature-box:nth-child(2) .icon {
+        transform:translateX(0px) translateY(0px) !important;
+      }
+
+      .feature-box:nth-child(3) .icon {
+        transform: translateX(18px) translateY(5px) !important;
+      }
+
+      .feature-box:nth-child(4) .icon {
+        transform: translateX(18px) translateY(5px) !important;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+h4 {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  letter-spacing: 0 !important;
+  width: 237px !important;
+  max-width: 100% !important;
+  margin: 0 auto 4px !important;
+  transform: none !important;
+  text-align: left !important; // Optional
+}
+
+
+p {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  letter-spacing: 0 !important;
+  width: 236px !important;
+  height: 48px !important;
+  transform: none !important;
+  margin: 0 !important;
+  text-align: left !important; // kalau kamu ingin isi paragrafnya rata tengah
+}
+
+
+a {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 22px !important;
+  letter-spacing: 0 !important;
+  text-decoration: underline solid !important;
+  text-decoration-thickness: 0% !important;
+  width: 91px !important;
+  height: 22px !important;
+  transform: none !important;
+  margin-top: 6px !important;
+  opacity: 1 !important;
+  white-space: nowrap;
+}
+
+      }
+
+ .dimmed {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 18px !important;
+  line-height: 24px !important;
+  letter-spacing: 0 !important;
+  width: 209px !important;
+  height: 24px !important;
+  transform: translateX(30px) translateY(-10px) !important;
+  color: #B4B6C4 !important;
+  opacity: 1 !important;
+}
+
+
+
+      .feature-box.active {
+        width: 100%;
+        height: 180px;
+        padding: 16px;
+        transform: translateY(370px);
+      }
+    }
+  }
+}
+
+
+
+
+
+// HALAMAN 6
+.global-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 60px 0; // bisa diatur ulang agar total tinggi pas 739px
+  text-align: center;
+  padding-top: 180px;
+
+  .container {
+    width: 1112px;
+    height: 739px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.subtitle {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFD43D;
+  text-align: center;
+  margin-bottom: 16px; // masih bisa dipakai kalau jarak ke bawah dibutuhkan
+}
+
+
+ .title {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  color: #060C3C;
+  margin-bottom: 48px;
+  width: 582px;
+  height: 108px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+  .map-image img {
+  width: 1112px;
+  height: 370px;
+  margin-bottom: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+
+    .stat-item {
+  h3 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 46px;
+  color: #060C3C;
+  text-align: left;
+  margin-bottom: 8px;
+
+  // Hapus properti ini:
+  // width: 88px;
+  // height: 46px;
+}
+
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #5D6180;
+  width: 248px;
+  height: 52px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+    }
+  }
+}
+@media (max-width: 1023px) and (min-width: 767px) {
+  .global-section {
+    padding: 100px 24px 60px;
+
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    .title {
+      font-size: 50px;
+      line-height: 42px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 40px;
+    }
+
+    .map-image img {
+      width: 1;
+      height: auto;
+      margin-bottom: 48px;
+    }
+
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      .stat-item {
+        h3 {
+          font-size: 38px;
+          line-height: 36px;
+          text-align: center;
+        }
+
+        p {
+          font-size: 25px;
+          line-height: 24px;
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .global-section {
+    padding: 60px 24px;
+    padding-top: 140px;
+    text-align: center;
+
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      padding-top: 180px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 32px;
+      line-height: 40px;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto 36px auto;
+      text-align: center;
+    }
+
+    .map-image img {
+      width: 100%;
+      max-width: 640px;
+      height: auto;
+      margin: 0 auto 40px auto;
+      display: block;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+
+      .stat-item {
+        h3 {
+          font-size: 28px;
+          line-height: 34px;
+          text-align: center;
+          margin-bottom: 6px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .global-section {
+    padding: 60px 16px; // padding kiri kanan kecil
+    padding-top: 120px; // lebih rendah dari desktop
+    text-align: center;
+
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      padding-top: 200px;
+    }
+
+   .subtitle {
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+   .title {
+  font-size: 26px;
+  line-height: 32px;
+  width: 327px;
+  height: 64px;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+  .map-image img {
+  width: 580px;
+  height: 170px; // atau `height: auto;` jika ingin tetap responsif
+  margin-bottom: 32px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+
+      .stat-item {
+      h3 {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: left; // atau bisa dihilangkan karena default-nya left
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
+  width: 150px;
+  height: 72px;
+  text-align: left;
+  margin: 0 auto; // biar tetap rapi di tengah stat-item
+}
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .global-section {
+    padding: 40px 12px;
+    padding-top: 100px;
+    text-align: center;
+
+    .container {
+      width: 100%;
+      height: auto;
+      padding: 0;
+      padding-top: 140px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 29px;
+      line-height: 30px;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 28px auto;
+      text-align: center;
+    }
+
+    .map-image img {
+      width: 100%;
+      max-width: 390px;
+      height: auto; // lebih fleksibel
+      margin: 0 auto 28px auto;
+      display: block;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr; // satu kolom saja agar tidak sempit
+      gap: 20px;
+
+      .stat-item {
+        h3 {
+          font-size: 25px;
+          line-height: 24px;
+          text-align: center;
+          margin-bottom: 6px;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 20px;
+          width: 100%;
+          max-width: 240px;
+          height: auto;
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+// HALAMAN 7
+.testimonial-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 0;
+  text-align: center;
+  padding-top: 150px;
+
+.container {
+  max-width: 1212px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; // biar isi konten gak mepet pinggir di layar kecil
+}
+
+
+  .testimonial-title {
+  font-size: 44px;        // dari layout
+  font-weight: 400;       // dari layout (sebelumnya 700)
+  color: #060c3c;         // dari layout (tetap)
+  margin-bottom: 48px;    // tetap
+  line-height: 54px;      // dari layout
+  text-align: center;     // dari layout
+  font-family: 'Chivo', sans-serif; // dari layout
+}
+
+
+  .testimonial-cards {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+ .testimonial-card {
+  background-color: #f4f1ff;     // disesuaikan dari layout (sebelumnya #f7f6ff)
+  border-radius: 6px;            // disesuaikan dari layout (sebelumnya 16px)
+  padding: 24px;                 // tetap (tidak ada nilai padding di layout)
+  text-align: left;              // tetap (tidak perlu diubah)
+  width: 340px;                  // disesuaikan dari layout (fixed width)
+  height: 322px;                 // disesuaikan dari layout (fixed height)
+  flex: none;                    // override flex: 1 agar width 344px tidak ditimpa
+
+
+ .testimonial-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+      width: 122.93px;
+      height: 30px;
+      margin-bottom: 16px;
+      display: block;
+    }
+}
+
+
+
+   .quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.5; // 150%
+  color: #5d6180;
+  margin-bottom: 24px;
+  max-width: 290px;
+}
+
+
+    .author {
+      .name {
+  display: block;
+  font-weight: 400; // disesuaikan dari 700 ke 400
+  font-size: 18px;
+  line-height: 24px;
+  color: #060c3c;
+}
+
+      .position {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6241D4;
+
+  &.purple {
+    color: #6241D4; // disamakan agar tidak override ke ungu lain
+  }
+      }
+    }
+  }
+}
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 16px; // jarak antara avatar dan teks
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .testimonial-section {
+    padding: 80px 16px 60px;
+    text-align: center;
+
+    .container {
+      padding: 0;
+    }
+
+  .testimonial-title {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 32px;
+  text-align: center; /* ⬅ agar sesuai layout */
+  max-width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    .testimonial-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      width: 100%; // supaya mengikuti lebar container (misal 327px)
+      max-width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+
+    .logo img{
+     width: 103.23px;
+height: 27.57px;
+margin-bottom: 16px;
+text-align: left;
+    }
+
+   .quote {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  max-width: 287px;
+  text-align: left;
+  margin-bottom: 20px;
+  max-width: 100% !important;
+}
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+    }
+
+   .author .name {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+
+    .author .position {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+}
+
+  }
+}
+
+// HALAMAN RESOURCE
+// H1
+.resource-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  transform: translateX(20px);
+}
+
+.resource-container {
+  max-width: 1110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap; // responsif di ukuran kecil
+}
+
+.resource-text-content {
+  flex: 1;
+  min-width: 300px;
+
+  h1 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: 0;
+    color: #000;
+    margin-bottom: 24px;
+    max-width: 536px;
+    transform: translateY(-40px);
+  }
+
+  p {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #5D6180;
+    margin-bottom: 32px;
+    max-width: 480px;
+    transform: translateY(-30px);
+  }
+
+  .subscribe-wrapper {
+    width: 100%;
+    max-width: 480px;
+    height: 66px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .subscribe-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .subscribe-button {
+    background-color: #6c4af2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(7px) translateX(-10px);
+
+  // Aturan teks sesuai layout
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: bottom;
+  white-space: nowrap;
+
+    &:hover {
+      background-color: #593ad0;
+    }
+  }
+}
+
+.resource-illustration {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 450px; // biar tidak melebihi 450px di layar besar
+    height: auto;
+    aspect-ratio: 450 / 354;
+    opacity: 1;
+  }
+}
+@media (min-width: 401px) and (max-width: 767px) {
+  .resource-wrapper {
+    padding: 60px 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .resource-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .resource-text-content {
+    width: 100%;
+    text-align: center;
+
+    h1 {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+      letter-spacing: 0;
+      margin: 0 auto 20px auto;
+      width: 100%;
+      max-width: 100%;
+      transform: translateX(-15px);
+    }
+
+    p {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 0;
+      margin: 0 auto 24px auto;
+      width: 100%;
+      max-width: 100%;
+      transform: translateX(-15px);
+    }
+
+    .subscribe-wrapper {
+      width: 100%;
+      max-width: 100%;
+      height: 64px;
+      display: flex;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      box-sizing: border-box;
+      transform: translateX(-15px);
+    }
+
+    .subscribe-input {
+      flex: 1;
+      border: none;
+      padding: 0 16px;
+      font-size: 16px;
+      outline: none;
+      color: #333;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    .subscribe-button {
+      background-color: #6c4af2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 160px;
+      height: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Chivo", sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: 0;
+      text-align: center;
+      white-space: nowrap;
+
+      &:hover {
+        background-color: #593ad0;
+      }
+    }
+  }
+
+  .resource-illustration {
+    width: 100%;
+    max-width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 374px) and (max-width: 400px) {
+  .resource-wrapper {
+    padding: 60px 20px;
+    transform: translateX(0); // hilangkan geser horizontal
+  }
+
+  .resource-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .resource-text-content {
+    text-align: center;
+
+  h1 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 32px;        // disesuaikan dengan layout
+  line-height: 38px;      // disesuaikan dengan layout
+  text-align: center;     // disesuaikan dengan layout
+  letter-spacing: 0;      // disesuaikan
+  transform: translateY(0) translateX(-15px);
+  margin: 0 auto 16px auto;
+}
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;        // dari layout
+  line-height: 28px;      // dari layout
+  text-align: center;     // dari layout
+  letter-spacing: 0;
+  transform: translateY(0) translateX(-15px);
+  margin: 0 auto 24px auto;
+  width: 327px;           // dari layout, opsional
+  height: 84px;           // dari layout, opsional
+}
+
+
+    .subscribe-wrapper {
+    width: 100%;
+    max-width: 327px;
+    height: 64px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transform: translateX(0px);
+  }
+
+  .subscribe-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .subscribe-button {
+  background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 180px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(7px) translateX(-20px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        vertical-align: bottom;
+        white-space: nowrap;
+    
+
+    &:hover {
+      background-color: #593ad0;
+    }
+  }
+}
+
+
+  .resource-illustration {
+   img {
+  width: 371.4px;    // disesuaikan dari layout (dibulatkan 3 angka di belakang koma)
+  height: 316px;     // disesuaikan dari layout
+  object-fit: cover; // untuk menjaga proporsi dan mengisi area
+  display: block;    // hilangkan space bawah img (opsional)
+  margin: 0 auto;    // jika ingin center
+}
+
+  }
+}
+
+@media (min-width: 319px) and (max-width: 374px) {
+  .resource-wrapper {
+    padding: 60px 20px;
+    transform: translateX(0); // hilangkan geser horizontal
+  }
+
+  .resource-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .resource-text-content {
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+
+  h1 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0;
+    margin: 0 auto 16px;
+    transform: none;
+  }
+
+  p {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0;
+    margin: 0 auto 24px;
+    width: 100%;
+    max-width: 327px;
+    height: auto;
+    transform: none;
+  }
+
+
+    .subscribe-wrapper {
+    width: 100%;
+    max-width: 327px;
+    height: 64px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transform: translateX(0px);
+  }
+
+  .subscribe-input {
+    flex: 1;
+    border: none;
+    padding: 0 16px;
+    font-size: 16px;
+    outline: none;
+    color: #333;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  .subscribe-button {
+  background-color: #6c4af2;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        width: 180px;
+        height: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(7px) translateX(-50px);
+        font-family: "Chivo", sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        vertical-align: bottom;
+        white-space: nowrap;
+    
+
+    &:hover {
+      background-color: #593ad0;
+    }
+  }
+}
+
+  .resource-illustration {
+    img {
+      width: 100%;
+      max-width: 371.4px;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+// HALAMAN 2
+.resource-section {
+  width: 1112px;
+  height: 240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; // biar semua card tingginya sama
+  gap: 20px;
+}
+
+.card {
+  width: 248px; // (248 * 4 + 20 * 3 = 1112)
+  height: 240px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0); // transparan
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+   h3 {
+    margin: 0;
+    width: 200px;
+    height: 32px;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0;
+    color: #ffffff;
+    transform: translateY(15px);
+  }
+p {
+  width: 200px;
+  height: 52px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #ffffff;
+  opacity: 0.8;
+  margin: 0 0 1rem 0;
+  transform: translateY(-10px);
+}
+
+
+    a {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto; // default agar tetap terlihat
+  text-decoration-offset: 0;
+  transform: translateY(-20px);
+}
+
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &.purple { background-color: rgba(108, 99, 255, 0.4); }
+  &.pink {
+    background-color: rgba(212, 104, 255, 0.4);
+    img {
+      object-fit: contain;
+      filter: brightness(0.9);
+      transform: scale(3);
+    }
+  }
+  &.yellow { background-color: rgba(255, 204, 0, 0.4); }
+  &.green { background-color: rgba(0, 204, 153, 0.4); }
+}
+@media (max-width: 1150px) and (min-width: 600px) {
+  .resource-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    height: auto;
+  }
+
+  .card {
+    width: calc(50% - 10px); // 2 kolom (dengan gap 20px total)
+    height: 240px;
+
+    .text {
+      h3, p, a {
+        width: 100%;
+      }
+    }
+
+    &.pink img {
+      transform: scale(3.5); // disesuaikan agar tidak terlalu besar di ukuran ini
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .resource-section {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* biar scroll halus di iOS */
+    scrollbar-width: none; /* hilangkan scrollbar di Firefox */
+    
+    &::-webkit-scrollbar {
+      display: none; /* hilangkan scrollbar di Chrome/Safari */
+    }
+  }
+
+  .card {
+    flex: 0 0 80%;
+    max-width: 80%;
+    min-width: 250px;
+    height: 220px;
+    scroll-snap-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+    .text {
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h3 {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: #ffffff;
+        transform: translateY(10px);
+        margin: 0 0 8px 0;
+      }
+
+      p {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+        opacity: 0.8;
+        transform: translateY(-6px);
+        margin-bottom: 12px;
+      }
+
+      a {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #ffffff;
+        text-decoration: underline;
+        transform: translateY(-10px);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+}
+.dot-pagination {
+  display: none; // default: sembunyi di desktop
+
+  @media (max-width: 599px) {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #d9d9d9;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: #6c4af2; // ungu aktif
+      }
+    }
+  }
+}
+
+
+// HALAMAN 3
+.guides-section {
+  width: 100%;
+  max-width: 1112px;
+  margin: 0 auto;
+  padding: 60px 0; // cukup padding atas-bawah saja
+  font-family: "Inter", sans-serif;
+  color: #0c1031;
+  transform: translateY(30px);
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+   h1 {
+  width: 472px;
+  height: 54px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 54px;
+  letter-spacing: 0;
+  color: #060C3C;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.view-all {
+  width: 69px;
+  height: 24px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #060C3C;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-offset: 0;
+}
+  }
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: 536px 1fr; // kiri fix 536px, kanan fleksibel
+  gap: 94px;
+
+    .guide-card {
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      img {
+       width: 536px;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #e0e0e0; 
+      }
+
+      .text {
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+.label {
+  width: 59px;
+  height: 28px;
+  font-family: 'Chivo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #9374FF;
+  margin-bottom: 8px;
+  text-transform: none;
+   transform: translateY(15px);
+}
+h2 {
+  width: 536px;
+  height: 80px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: #060C3C;
+  margin: 0;
+}
+
+h3 {
+  width: 256px;
+  height: 64px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #060C3C;
+  margin: 0;
+}
+
+
+
+        p {
+        width: 536px;
+  height: 84px;
+  font-family: 'Chivo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #5D6180;
+  margin: 0;
+        }
+.read-now {
+  width: 86px;
+  height: 24px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #060C3C;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-offset: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+.read-nowR {
+  width: 86px;
+  height: 24px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #060C3C;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-offset: 0;
+  margin: 0;
+  white-space: nowrap;
+  transform: translateY(25px);
+}
+      }
+    }
+
+    .large {
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 268px;
+    width: 100%; // atau 536px jika eksplisit
+    transform: translateX(-15px);
+  }
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+.guide-card {
+  width: 536px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  background-color: #ffffff; // jika butuh
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+
+      
+img {
+  width: 248px;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+
+        .text {
+          padding: 16px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+.label {
+  width: 256px;
+  height: 28px;
+  font-family: 'Chivo', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #9374FF;
+  margin-bottom: 6px;
+  transform: translateY(-25px);
+}
+
+
+         h3 {
+  width: 256px;
+  height: 64px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0;
+  color: #060C3C;
+  margin-bottom: 8px;
+  margin-top: 0;
+  transform: translateY(-20px); // jika memang ingin diangkat ke atas
+}
+
+.read-now {
+  width: 87px;
+  height: 24px;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #060C3C;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  text-decoration-offset: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+        }
+        
+      }}}}
+      @media (min-width: 767px) and (max-width: 1200px) {
+  .guides-section {
+    padding: 40px 16px;
+
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 36px;
+        line-height: 44px;
+        width: auto;
+        white-space: normal;
+      }
+
+      .view-all {
+        font-size: 16px;
+      }
+    }
+
+    .guides-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+
+      .guide-card {
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .text {
+          padding: 12px;
+
+          .label {
+            font-size: 16px;
+            line-height: 24px;
+            transform: none;
+            transform: translateX(10px) translateY(15px);
+          }
+
+          h2 {
+            font-size: 24px;
+            line-height: 32px;
+            width: 100%;
+            height: auto;
+            transform: translateX(10px);
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            height: auto;
+            max-width: 100%;
+            transform: translateX(10px);
+          }
+
+          .read-now, .read-nowR {
+            font-size: 16px;
+            transform: none;
+            transform: translateY(15px) translateX(10px);
+          }
+        }
+      }
+
+      .right-column {
+        gap: 0px;
+        transform: translateY(-10px);
+
+        .guide-card {
+          height: auto;
+          width: 100%;
+          flex-direction: row;
+
+          img {
+            width: 40%;
+            height: auto;
+          }
+
+          .text {
+            padding: 12px;
+            gap: 4px;
+
+            .label {
+              font-size: 14px;
+              line-height: 20px;
+              transform: none;
+              transform: translateY(15px);
+            }
+
+            h3 {
+              font-size: 18px;
+              line-height: 26px;
+              transform: none;
+            }
+
+            .read-now {
+              font-size: 14px;
+              line-height: 22px;
+              transform: translateY(-15px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+      @media (min-width: 599px) and (max-width: 767px) {
+  .guides-section {
+    padding: 40px 16px;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      h1 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 42px;
+        white-space: normal;
+      }
+
+      .view-all {
+        font-size: 16px;
+      }
+    }
+
+    .guides-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .guide-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .text {
+          padding: 16px;
+
+          .label {
+            transform: none;
+            font-size: 16px;
+            line-height: 24px;
+          }
+
+          h2 {
+            font-size: 24px;
+            line-height: 32px;
+            width: 100%;
+          }
+
+          h3 {
+            font-size: 20px;
+            line-height: 28px;
+            width: 100%;
+            transform: none;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 24px;
+            width: 100%;
+            height: auto;
+          }
+
+          .read-now,
+          .read-nowR {
+            font-size: 16px;
+            transform: none;
+          }
+        }
+      }
+
+     .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // Lebih kecil agar compact
+
+  .guide-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+    img {
+      width: 40%;
+      height: auto;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .text {
+      flex: 1;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+
+      .label {
+        font-size: 14px;
+        line-height: 20px;
+        color: #9374FF;
+        margin-bottom: 4px;
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 26px;
+        color: #060C3C;
+        margin: 0;
+      }
+
+      .read-now {
+        font-size: 16px;
+        line-height: 22px;
+        color: #060C3C;
+        text-decoration: underline;
+        margin-top: 4px;
+      }
+    }
+  }
+}
+    }}}
+      @media (min-width: 401px) and (max-width: 599px) {
+  .guides-section {
+    padding: 40px 24px;
+    transform: none;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 28px;
+
+      h1 {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 32px; // lebih besar dari mobile
+        line-height: 40px;
+        letter-spacing: 0;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        white-space: normal;
+        display: block;
+      }
+
+      .view-all {
+        display: none;
+      }
+    }
+
+    .guides-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+
+      .guide-card {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+          display: block;
+        }
+
+        .text {
+          padding: 16px;
+          gap: 10px;
+          transform: none;
+
+          .label {
+            font-size: 20px;
+            line-height: 28px;
+            transform: translateY(10px);
+            display: block;
+          }
+
+          h2 {
+            font-size: 22px;
+            line-height: 30px;
+            margin: 0;
+            width: 100%;
+            text-align: left;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 26px;
+            width: 100%;
+            text-align: left;
+            white-space: normal;
+            margin: 0;
+            transform: none;
+          }
+
+          .read-nowR {
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration: underline;
+            display: inline-block;
+            color: inherit;
+            transform: translateY(20px);
+          }
+        }
+      }
+
+      .right-column {
+        gap: 16px;
+
+        .guide-card {
+          width: 100%;
+          flex-direction: row;
+          align-items: center;
+          height: auto;
+          padding: 0;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+
+          img {
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            flex-shrink: 0;
+            display: block;
+          }
+
+          .text {
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .label {
+              font-size: 14px;
+              line-height: 20px;
+              margin-bottom: 4px;
+              transform: translateY(10px);
+            }
+
+            h3 {
+              font-size: 18px;
+              line-height: 26px;
+              margin: 0 0 8px 0;
+              transform: translateY(-5px);
+              width: 100%;
+            }
+
+            .read-now {
+              font-size: 14px;
+              line-height: 18px;
+              text-decoration: underline;
+              display: inline-block;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .heading-desktop {
+    display: none !important;
+  }
+
+  .heading-mobile {
+    display: block;
+  }
+}
+
+      @media (max-width: 400px) {
+  .guides-section {
+    padding: 40px 20px;
+    transform: none;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 24px;
+
+    h1 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 26px;        // sesuai layout
+  line-height: 32px;      // sesuai layout
+  letter-spacing: 0;
+  text-align: center;     // teks rata tengah
+  width: 327px;           // sesuai layout
+  height: 32px;           // sesuai layout (opsional, jika ingin ketat)
+  margin: 0 auto;         // posisikan ke tengah container
+  white-space: normal;    // biar teks bisa wrap
+  display: block;
+}
+
+
+      .view-all {
+        display: none;
+      }
+    }
+
+    .guides-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      // Gambar besar di atas (tetap vertikal)
+      .guide-card {
+        flex-direction: column;
+img {
+  width: 327px ;         // sesuai layout
+  height: 210px;        // sesuai layout
+  object-fit: cover;    // isi penuh area tanpa merusak proporsi
+  display: block;
+  margin: 0 auto;       // agar posisinya rata tengah
+}
+
+
+        .text {
+          padding: 16px;
+          gap: 8px;
+          transform: none;
+
+          .label {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;       // sesuai layout
+  line-height: 28px;     // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  width: 59px;           // opsional, hanya jika ingin sesuai ukuran layout ketat
+  height: 28px;          // opsional
+  display: block;        // agar bisa diatur width/height dengan tepat
+  transform: translateY(10px);
+}
+
+
+          h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 20px;       // sesuai layout
+  line-height: 26px;     // sesuai layout
+  letter-spacing: 0;
+  width: 100%;          // sesuai layout (opsional)
+  height: 52px;          // sesuai layout (opsional)
+  margin: 0 auto;        // untuk posisi tengah (opsional)
+  text-align: left;    // jika ingin teksnya rata tengah
+  display: block;
+}
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;        // sesuai layout
+  line-height: 26px;      // disesuaikan
+  letter-spacing: 0;
+  width: 327px;           // sesuai layout
+  height: 104px;          // sesuai layout (opsional)
+  margin: 0 auto;         // untuk posisi tengah
+  text-align: left;     // jika ingin teksnya rata tengah
+  white-space: normal;    // agar bisa multi-line
+  display: block;
+  transform: translateY(0px);
+}
+
+
+        .read-nowR {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;               // dari layout
+  line-height: 24px;             // dari layout
+  letter-spacing: 0;
+  transform: none;
+  width: 86px;                   // opsional, jika ingin ukuran fix
+  height: 24px;                  // opsional
+  text-decoration: underline;    // dari layout
+  text-underline-offset: 0px;    // sesuai layout (offset 0%)
+  text-decoration-thickness: auto; // 0% bisa diabaikan, auto akan mengikuti font
+  display: inline-block;         // supaya width/height bisa diterapkan
+  color: inherit;                // bisa disesuaikan jika ada warna
+  transform: translateY(10px);
+}
+        }
+      }
+
+      // LIST artikel kecil di bawah
+      .right-column {
+        gap: 0px;
+
+        .guide-card {
+          width: 100%;
+          flex-direction: row; // INI YANG PENTING
+          align-items: center;
+          height: auto;
+          padding: 0;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+
+         img {
+  width: 154px;           // sesuai layout
+  height: 112px;          // sesuai layout
+  object-fit: cover;      // biar gambar tidak melar
+  flex-shrink: 0;         // biar ukuran tetap saat di dalam flexbox
+  border-radius: 0;       // sesuai layout
+  display: block;         // hilangkan space bawah img (opsional)
+}
+
+
+          .text {
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .label {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 12px;        // sesuai layout
+  line-height: 18px;      // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  margin-bottom: 4px;     // sesuai kode kamu
+  display: block;
+  transform: translateY(15px);
+}
+
+
+            h3 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;       // sesuai layout
+  line-height: 22px;     // sesuai layout
+  letter-spacing: 0;
+  margin: 0 0 8px 0;
+  transform: none;
+  width: 153px;          // dari layout (opsional)
+  height: 66px;          // dari layout (opsional)
+  display: block;
+  transform: translateY(-10px);
+}
+
+
+            .read-now {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 12px;                 // sesuai layout
+  line-height: 16px;               // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  text-decoration: underline;      // dari layout
+  text-decoration-style: solid;
+  text-underline-offset: 0px;      // offset 0% → 0px
+  text-decoration-thickness: auto; // 0% → gunakan auto atau 1px
+  display: inline-block;
+  transform: translateY(-10px);
+}
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading-desktop {
+  display: block;
+}
+
+.heading-mobile {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .heading-desktop {
+    display: none !important;
+  }
+
+  .heading-mobile {
+    display: block;
+  }
+}
+
+ @media (max-width: 361px) {
+  .guides-section {
+    padding: 40px 20px;
+    transform: none;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 24px;
+
+    h1 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 26px;        // sesuai layout
+  line-height: 32px;      // sesuai layout
+  letter-spacing: 0;
+  text-align: center;     // teks rata tengah
+  width: 327px;           // sesuai layout
+  height: 32px;           // sesuai layout (opsional, jika ingin ketat)
+  margin: 0 auto;         // posisikan ke tengah container
+  white-space: normal;    // biar teks bisa wrap
+  display: block;
+}
+
+
+      .view-all {
+        display: none;
+      }
+    }
+
+    .guides-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      // Gambar besar di atas (tetap vertikal)
+      .guide-card {
+        flex-direction: column;
+img {
+  width: 327px ;         // sesuai layout
+  height: 210px;        // sesuai layout
+  object-fit: cover;    // isi penuh area tanpa merusak proporsi
+  display: block;
+  margin: 0 auto;       // agar posisinya rata tengah
+}
+
+
+        .text {
+          padding: 16px;
+          gap: 8px;
+          transform: none;
+
+          .label {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;       // sesuai layout
+  line-height: 28px;     // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  width: 59px;           // opsional, hanya jika ingin sesuai ukuran layout ketat
+  height: 28px;          // opsional
+  display: block;        // agar bisa diatur width/height dengan tepat
+  transform: translateY(10px);
+}
+
+
+          h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 17px;       // sesuai layout
+  line-height: 26px;     // sesuai layout
+  letter-spacing: 0;
+  width: 100%;          // sesuai layout (opsional)
+  height: 52px;          // sesuai layout (opsional)
+  margin: 0 auto;        // untuk posisi tengah (opsional)
+  text-align: left;    // jika ingin teksnya rata tengah
+  display: block;
+}
+
+p {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 15px;        // sesuai layout
+  line-height: 26px;      // disesuaikan
+  letter-spacing: 0;
+  width: 100%;           // sesuai layout
+  height: 100%;          // sesuai layout (opsional)
+  margin: 0 auto;         // untuk posisi tengah
+  text-align: left;     // jika ingin teksnya rata tengah
+  white-space: normal;    // agar bisa multi-line
+  display: block;
+  transform: translateY(0px);
+}
+
+
+        .read-nowR {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 15px;               // dari layout
+  line-height: 24px;             // dari layout
+  letter-spacing: 0;
+  transform: none;
+  width: 86px;                   // opsional, jika ingin ukuran fix
+  height: 24px;                  // opsional
+  text-decoration: underline;    // dari layout
+  text-underline-offset: 0px;    // sesuai layout (offset 0%)
+  text-decoration-thickness: auto; // 0% bisa diabaikan, auto akan mengikuti font
+  display: inline-block;         // supaya width/height bisa diterapkan
+  color: inherit;                // bisa disesuaikan jika ada warna
+  transform: translateY(5px);
+}
+        }
+      }
+
+      // LIST artikel kecil di bawah
+      .right-column {
+        gap: 0px;
+
+        .guide-card {
+          width: 100%;
+          flex-direction: row; // INI YANG PENTING
+          align-items: center;
+          height: auto;
+          padding: 0;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.03);
+
+         img {
+  width: 154px;           // sesuai layout
+  height: 112px;          // sesuai layout
+  object-fit: cover;      // biar gambar tidak melar
+  flex-shrink: 0;         // biar ukuran tetap saat di dalam flexbox
+  border-radius: 0;       // sesuai layout
+  display: block;         // hilangkan space bawah img (opsional)
+}
+
+
+          .text {
+            padding: 12px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .label {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 12px;        // sesuai layout
+  line-height: 18px;      // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  margin-bottom: 4px;     // sesuai kode kamu
+  display: block;
+  transform: translateY(15px);
+}
+
+
+            h3 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;       // sesuai layout
+  line-height: 22px;     // sesuai layout
+  letter-spacing: 0;
+  margin: 0 0 8px 0;
+  transform: none;
+  width: 153px;          // dari layout (opsional)
+  height: 66px;          // dari layout (opsional)
+  display: block;
+  transform: translateY(-10px);
+}
+
+
+            .read-now {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 12px;                 // sesuai layout
+  line-height: 16px;               // sesuai layout
+  letter-spacing: 0;
+  transform: none;
+  text-decoration: underline;      // dari layout
+  text-decoration-style: solid;
+  text-underline-offset: 0px;      // offset 0% → 0px
+  text-decoration-thickness: auto; // 0% → gunakan auto atau 1px
+  display: inline-block;
+  transform: translateY(-10px);
+}
+          }
+        }
+      }
+    }
+  }
+}
+
+.heading-desktop {
+  display: block;
+}
+
+.heading-mobile {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  .heading-desktop {
+    display: none !important;
+  }
+
+  .heading-mobile {
+    display: block;
+  }
+}
+
+
+// HALAMAN 4
+.latest-blog-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #fff;
+  font-family: 'Chivo', sans-serif;
+
+.container {
+  width: 1112px;
+  height: 498px;
+  margin: 0 auto;
+}
+
+  .latest-blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+  h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  line-height: 54px;
+  color: #060C3C;
+}
+
+
+   a {
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #060C3C;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0;
+}
+
+  }
+
+  .blog-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    .blog-card {
+      width: 100%;
+      max-width: 352px; // Total 3 card muat dalam 1112px
+      border-radius: 8px;
+img {
+  width: 344px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.category {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #D280FF;
+  width: fit-content; // Atau 38px kalau kamu mau paksa fix
+  padding: 0 8px; // Tambahkan sedikit padding biar teks nyaman
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+
+   h3 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32px;
+  color: #060C3C;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 12px;
+}
+
+.read-now {
+  font-family: 'Chivo', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0;
+  text-decoration-offset: 0;
+  color: #060C3C;
+  width: 256px;
+  height: 24px;
+}
+    }
+  }
+}
+@media (min-width: 767px) and (max-width: 1150px) {
+  .latest-blog-section {
+    padding: 48px 24px;
+
+    .container {
+      width: 100%;
+      height: auto;
+    }
+
+    .latest-blog-header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+
+      h2 {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      a {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .blog-cards {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+
+      .blog-card {
+        flex: 1 1 calc(50% - 32px); // 2 kolom responsif
+        max-width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .category {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0 6px;
+        }
+
+        h3 {
+          font-size: 20px;
+          line-height: 30px;
+          height: auto;
+        }
+
+        .read-now {
+          font-size: 16px;
+          line-height: 22px;
+          width: auto;
+          height: auto;
+        }
+      }
+
+      // Gaya khusus kartu ke-3
+   .blog-card:nth-child(3) {
+  flex: 1 1 100%;
+  max-width: 100%;
+  margin: 16px auto; // Posisi tengah container
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Konten dalam rata tengah horizontal
+  text-align: center; // Konten dalam rata tengah teks juga
+
+  img {
+    height: 400px;
+    width: 600px;
+    max-width: 100%; // Supaya tetap responsif di layar kecil
+    object-fit: cover;
+  }
+
+  h3 {
+    font-size: 22px;
+        line-height: 32px;
+        margin-top: 16px;
+        max-width: 500px;
+        text-align: left;
+        transform: translateX(-50px);
+  }
+
+  .category {
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 8px;
+    transform: translateX(-285px) translateY(10px);
+  }
+
+  .read-now {
+    font-size: 15px;
+    line-height: 20px;
+    margin-top: 12px;
+    transform: translateX(-265px);
+  }
+      }
+    }
+  }
+}
+
+@media (min-width: 599px) and (max-width: 767px) {
+  .latest-blog-section {
+    padding: 40px 16px;
+
+    .container {
+      width: 100%;
+      height: auto;
+    }
+
+    .latest-blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      h2 {
+        font-size: 32px;
+        line-height: 42px;
+        text-align: left;
+      }
+
+      a {
+      display: none;
+      }
+    }
+
+    .blog-cards {
+      flex-direction: column;
+      gap: 32px;
+
+      .blog-card {
+        max-width: 100%;
+        width: 100%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        .category {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0 6px;
+        }
+
+        h3 {
+          font-size: 20px;
+          line-height: 28px;
+          height: auto;
+        }
+
+        .read-now {
+          font-size: 16px;
+          line-height: 22px;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .latest-blog-section {
+    padding: 40px 20px;
+
+    .container {
+      width: 100%;
+      height: auto;
+    }
+
+    .latest-blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 24px;
+h2 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0;
+  margin: 0 auto;
+  width: 327px; /* sesuai layout */
+  height: 32px;
+}
+
+  a {
+display: none;
+}   
+    }
+
+    .blog-cards {
+      flex-direction: column;
+      gap: 24px;
+
+      .blog-card {
+        max-width: 100%;
+        width: 100%;
+
+      img {
+  width: 327px;
+  height: 210px;
+  object-fit: cover;
+  display: block; /* supaya tidak ada space bawah dari inline img */
+}
+
+.category {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+h3 {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  height: auto; /* bisa dihilangkan karena default-nya sudah auto */
+  transform: translateY(-10px) translateX(10px);
+}
+
+      .read-now {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px; /* biar terlihat rapi */
+  text-decoration-thickness: 1px; /* bisa disesuaikan jika ingin lebih tipis/tebal */
+  height: auto; /* opsional, ini sudah default */
+  margin-left: 10px;
+}
+      }
+    }
+  }
+}
+@media (min-width: 319px) and (max-width: 360px) {
+  .latest-blog-section {
+    padding: 32px 16px;
+
+    .container {
+      width: 100%;
+      height: auto;
+    }
+
+    .latest-blog-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      h2 {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 327px;
+        height: auto;
+      }
+
+      a {
+        display: none;
+      }
+    }
+
+    .blog-cards {
+      flex-direction: column;
+      gap: 24px;
+
+      .blog-card {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 100%;
+          max-width: 327px;
+          height: auto;
+          object-fit: cover;
+          display: block;
+        }
+
+        .category {
+          font-family: 'Chivo', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: 0;
+          margin-top: 12px;
+          margin-bottom: 4px;
+          text-align: center;
+          transform: translateX(-125px);
+        }
+
+        h3 {
+          font-family: 'Chivo', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: 0;
+          margin-bottom: 8px;
+          height: auto;
+          text-align: left;
+          transform: none;
+          transform: translateY(-10px) translateX(5px);
+        }
+
+        .read-now {
+          font-family: 'Chivo', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0;
+          text-align: center;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          text-decoration-thickness: 1px;
+          height: auto;
+          margin: 0 auto;
+          transform: translateX(-105px);
+        }
+      }
+    }
+  }
+}
+
+
+// HALAMAN 5
+.blog-section {
+  width: 100%;
+  padding: 60px 0;
+  background-color: #fff;
+  font-family: 'Chivo', sans-serif;
+
+  .blog-container {
+    width: 1112px;
+    height: 498px;
+    margin: 0 auto;
+  }
+
+  .blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .blog-title {
+      font-size: 44px;
+      font-weight: 400;
+      line-height: 54px;
+      color: #060C3C;
+    }
+
+    .blog-link {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #060C3C;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 0;
+    }
+  }
+
+  .blog-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    .blog-card {
+      width: 344px;
+      border-radius: 8px;
+
+      .card-image {
+        width: 344px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .card-category {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #38E7B2;
+        width: fit-content;
+        padding: 0 8px;
+        border-radius: 4px;
+        margin: 16px 0 8px;
+      }
+
+      .card-title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 32px;
+        color: #060C3C;
+        width: 350px;
+        height: 64px;
+        margin-bottom: 12px;
+      }
+
+      .card-read {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        color: #060C3C;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0;
+        width: 256px;
+        height: 24px;
+      }
+    }
+  }
+}
+@media (min-width: 767px) and (max-width: 1150px) {
+  .blog-section {
+    padding: 48px 24px;
+
+    .blog-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+
+      .blog-title {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      .blog-link {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+    .blog-list {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+
+      .blog-card {
+        flex: 1 1 calc(50% - 32px);
+        max-width: 100%;
+
+        .card-image {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+        }
+
+        .card-category {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0 6px;
+        }
+
+        .card-title {
+          font-size: 20px;
+          line-height: 30px;
+          height: auto;
+        }
+
+        .card-read {
+          font-size: 16px;
+          line-height: 22px;
+          width: auto;
+          height: auto;
+        }
+      }
+
+      // Untuk card ke-3 tampil full
+      .blog-card:nth-child(3) {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 16px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .card-image {
+          height: 400px;
+          width: 600px;
+          max-width: 100%;
+          object-fit: cover;
+        }
+
+        .card-title {
+          font-size: 22px;
+          line-height: 32px;
+          margin-top: 16px;
+          max-width: 500px;
+          text-align: left;
+          transform: translateX(-125px);
+        }
+
+        .card-category {
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 8px;
+          transform: translateX(-245px) translateY(10px);
+        }
+
+        .card-read {
+          font-size: 15px;
+          line-height: 20px;
+          margin-top: 12px;
+          transform: translateX(-265px);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 599px) and (max-width: 767px) {
+  .blog-section {
+    padding: 40px 16px;
+
+    .blog-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      .blog-title {
+        font-size: 32px;
+        line-height: 42px;
+        text-align: left;
+      }
+
+      .blog-link {
+        display: none;
+      }
+    }
+
+    .blog-list {
+      flex-direction: column;
+      gap: 32px;
+
+      .blog-card {
+        width: 100%;
+        max-width: 100%;
+
+        .card-image {
+          width: 100%;
+          height: auto;
+        }
+
+        .card-category {
+          font-size: 16px;
+          line-height: 24px;
+          padding: 0 6px;
+        }
+
+        .card-title {
+          font-size: 20px;
+          line-height: 28px;
+          height: auto;
+        }
+
+        .card-read {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .blog-section {
+    padding: 40px 20px;
+
+    .blog-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      .blog-title {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        margin: 0 auto;
+        width: 327px;
+        height: 32px;
+      }
+
+      .blog-link {
+        display: none;
+      }
+    }
+
+    .blog-list {
+      flex-direction: column;
+      gap: 24px;
+
+      .blog-card {
+        width: 100%;
+        max-width: 100%;
+
+        .card-image {
+          width: 327px;
+          height: 210px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .card-category {
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: 12px;
+          margin-bottom: 4px;
+        }
+
+        .card-title {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 8px;
+          transform: translateY(-10px) translateX(10px);
+        }
+
+        .card-read {
+          font-size: 16px;
+          line-height: 22px;
+          text-decoration: underline;
+          text-underline-offset: 2px;
+          text-decoration-thickness: 1px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 319px) and (max-width: 360px) {
+  .blog-section {
+    padding: 32px 16px;
+
+    .blog-container {
+      width: 100%;
+      height: auto;
+    }
+
+    .blog-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      .blog-title {
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 327px;
+        height: auto;
+      }
+
+      .blog-link {
+        display: none;
+      }
+    }
+
+    .blog-list {
+      flex-direction: column;
+      gap: 24px;
+
+      .blog-card {
+        width: 100%;
+        max-width: 327px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .card-image {
+          width: 100%;
+          max-width: 327px;
+          height: auto;
+          object-fit: cover;
+          display: block;
+        }
+
+        .card-category {
+          font-family: "Chivo", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        text-align: center;
+        transform: translateX(-95px);
+        }
+
+        .card-title {
+        font-family: "Chivo", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0;
+        margin-bottom: 8px;
+        text-align: left;
+        transform: translateY(-10px) translateX(0px);
+        max-width: 300px;
+        }
+
+        .card-read {
+                font-family: "Chivo", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        transform: translateY(-20px) translateX(-120px);
+        }
+      }
+    }
+  }
+}
+
+
+// CONTACT
+.contact-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 62px;
+  padding: 0 40px;
+  transform: translateX(30px);
+
+  .column {
+    width: 536px;
+  }
+
+  .left {
+    height: 774px;
+    transform: translateY(-30px);
+    width: 556px;
+
+    h2 {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 54px;
+      letter-spacing: 0;
+      margin-bottom: 24px;
+      max-width: 536px;
+    }
+
+    p {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: 0;
+      color: #5D6180;
+      margin-bottom: 16px;
+      max-width: 100%;
+    }
+    .desktop-description-only {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #5D6180;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+// Sembunyikan di layar kecil
+@media (max-width: 599px) {
+  .desktop-description-only {
+    display: none;
+  }
+}
+
+    h3 {
+      font-family: 'Chivo', sans-serif;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: #060C3C;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      max-width: 100%;
+    }
+
+   // Styling umum untuk semua gambar kantor
+.office-image {
+  width: 526px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+// Default: mobile image disembunyikan
+.mobile-office-image {
+  display: none;
+}
+
+@media (max-width: 599px) {
+  // Tampilkan gambar mobile
+ .mobile-office-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: translateY(-290px);
+  }
+
+  .mobile-office-image:nth-of-type(1) {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-office-image:nth-of-type(2) {
+    margin-top: 32px;
+    margin-bottom: 20px;
+    transform:  translateY(450px);
+  }
+
+
+  // Sembunyikan gambar desktop
+  .desktop-office-image {
+    display: none;
+  }
+
+  // Optional: responsif gambar
+  .office-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+    .addresses {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+
+        .address-blockA {
+        width: 48%;
+
+        h4 {
+          font-family: 'Chivo', sans-serif;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          letter-spacing: 0;
+          color: #060C3C;
+          margin-bottom: 8px;
+        }
+
+     p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 4px 0;
+
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #5D6180;
+  max-width: 200px;
+  
+
+.section-description {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #5D6180;
+  margin-bottom: 16px;
+  max-width: 100%;
+}
+
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              width: 100%;
+              height: 100%;
+              stroke: #5D6180;
+            }}}}
+
+         a {
+    color: #5D6180;
+    text-decoration: underline; // sesuai contoh di gambar
+    font-weight: 400;
+    transition: 0.3s;}
+
+    .address-block {
+  width: 48%;
+
+  h4 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;  // supaya judul lebih bold
+    font-size: 18px;
+    line-height: 28px;
+    color: #060C3C;
+    margin-bottom: 8px;
+  }
+
+  p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px; // jarak icon dan teks
+    margin: 4px 0;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #5D6180;
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        stroke: #5D6180;
+      }
+    }
+  }
+
+  /* Styling khusus untuk link nomor telepon */
+  a {
+    color: #5D6180;
+    text-decoration: underline; // sesuai contoh di gambar
+    font-weight: 400;
+    transition: 0.3s;
+
+    &:hover {
+      color: #060C3C;
+    }
+  }
+}
+    }}
+  
+  /* Default: versi mobile disembunyikan */
+.mobile-version {
+  display: none;
+}
+
+/* Saat layar kecil (misal max 599px) */
+@media (max-width: 599px) {
+  .desktop-version {
+    display: none; /* Desktop hilang di mobile */
+  }
+  .mobile-version {
+    display: block; /* Mobile muncul */
+  }
+}
+
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+
+    .contact-form {
+      background-color: #ffffff;
+      box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 32px;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      min-height: 796px;
+
+      .form-row {
+        display: flex;
+        gap: 16px;
+
+        .form-group {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        label {
+          font-size: 14px;
+          font-weight: 600;
+          color: #111827;
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 24px 16px;
+        font-size: 14px;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        background-color: white;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      button {
+        margin-top: 12px;
+        padding: 14px;
+        background-color: #6c2bd9;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Styling untuk tel input dan flag dropdown */
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  padding-left: 52px !important;
+}
+
+.iti__flag-container {
+  left: 8px;
+}
+
+input[type="tel"] {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  height: 44px;
+  font-size: 14px;
+  width: 100%;
+}
+@media (min-width: 767px) and (max-width: 1110px) {
+  .contact-section {
+    flex-direction: row; /* tetap 2 kolom */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px; /* jarak antar kolom sedikit diperkecil */
+    margin-top: 50px;
+    padding: 0 24px;
+    transform: none;
+
+    .column {
+      width: 50%; /* biar rapi dan seimbang */
+    }
+
+    .left {
+      width: 52%; 
+      height: auto;
+      transform: none;
+
+      h2 {
+        font-size: 38px; /* sedikit lebih kecil dari desktop */
+        line-height: 48px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 27px;
+        max-width: 100%;
+      }
+
+      h3 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      /* Gambar kantor tetap tampilan desktop */
+      .office-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 16px;
+      }
+
+      /* Address tetap dua kolom */
+      .addresses {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .address-block,
+        .address-blockA {
+          width: 48%; /* tetap 2 kolom */
+        }
+
+        h4 {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+          gap: 8px;
+        }
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 48%;
+      transform: none;
+
+      .contact-form {
+        padding: 28px;
+        gap: 32px;
+        width: 100%;
+        max-width: 100%;
+
+        .form-row {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+
+          .form-group {
+            flex: 1;
+          }
+        }
+
+        button {
+          padding: 14px;
+        }
+      }
+    }
+
+    /* Heading dan elemen desktop tetap aktif */
+    .desktop-heading,
+    .desktop-description {
+      display: block;
+    }
+
+    .mobile-heading,
+    .mobile-description {
+      display: none;
+    }
+
+    .desktop-office-title {
+      display: block;
+    }
+    .mobile-office-title {
+      display: none;
+    }
+
+    /* Tidak tampilkan versi mobile */
+    .mobile-version {
+      display: none;
+    }
+  }
+}
+
+/* ✅ Styling untuk layar 600–767px (tablet kecil) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .contact-section {
+    flex-direction: column; /* ✅ Jadi kolom supaya lebih lega */
+    align-items: center;
+    gap: 48px;
+    margin-top: 40px;
+    padding: 0 24px;
+    transform: none;
+
+    .left {
+      width: 90%;
+      height: auto;
+      transform: none;
+      text-align: center;
+
+      h2 {
+        font-size: 42px;
+        line-height: 42px;
+        margin-bottom: 20px;
+         text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content; 
+      }
+
+      p,
+      .desktop-description-only {
+        font-size: 17px;
+        line-height: 26px;
+        max-width: 500px;
+        margin: 0 auto 20px;
+      }
+
+      h3 {
+        font-size: 22px;
+        line-height: 30px;
+        margin-top: 24px;
+        margin-bottom: 12px;
+      }
+
+      /* ✅ Gambar kantor untuk tablet */
+      .office-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      /* ✅ Versi mobile/desktop image diatur ulang */
+      .mobile-office-image {
+        display: none;
+      }
+      .desktop-office-image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* ✅ Bagian alamat lebih rapi */
+      .addresses {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px; /* 🔹 kasih jarak antar kolom biar lega */
+
+        .address-block,
+        .address-blockA {
+          width: 48%; /* 🔹 Jadi 2 kolom */
+          text-align: left;
+        }
+
+        h4 {
+          font-size: 18px;
+          line-height: 26px;
+          font-weight: 600;
+          margin-bottom: 8px;
+        }
+
+        p {
+          display: flex;
+          align-items: center; /* 🔹 Biar icon rata tengah sama teks */
+          gap: 8px;
+          font-size: 16px;
+          line-height: 24px;
+          margin: 6px 0;
+        }
+
+        /* ✅ Ukuran icon default */
+        .icon {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        /* ✅ Icon telepon bisa diperbesar sedikit biar jelas */
+        .icon-phone svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+
+    .right {
+      width: 90%;
+      transform: none;
+      margin-top: 20px;
+
+      .contact-form {
+        padding: 28px;
+        gap: 32px;
+
+        .form-row {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        button {
+          padding: 14px;
+        }
+      }
+    }
+
+    /* ✅ Desktop-heading & description tetap tampil */
+    .desktop-heading,
+    .desktop-description {
+      display: block;
+    }
+
+    .mobile-heading,
+    .mobile-description {
+      display: none;
+    }
+
+    /* ✅ Desktop title tetap, mobile title disembunyikan */
+    .desktop-office-title {
+      display: block;
+    }
+    .mobile-office-title {
+      display: none;
+    }
+
+    /* ✅ Mobile-version disembunyikan (tablet ikut desktop) */
+    .mobile-version {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 0 16px;
+    transform: none;
+    gap: 40px;
+
+    .left {
+      order: 1;
+      width: 100%;
+      transform: none;
+      height: auto;
+
+      h2 {
+        font-size: 28px;
+        line-height: 36px;
+        transform: translateY(-880px); // ❗️Kalau tidak dibutuhkan, sebaiknya dihapus
+      }
+
+      .section-description {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #5D6180;
+        margin-bottom: 16px;
+        max-width: 100%;
+        transform: translateY(-880px);
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .office-image {
+        width: 100%;
+        height: auto;
+      }
+
+      /* ✅ Responsive addresses */
+      .addresses {
+        flex-direction: column;
+        gap: 24px;
+
+        /* Semua block address jadi full width di mobile */
+        .address-block {
+          width: 100%;
+        }
+
+        a {
+          color: #333;
+          text-decoration: none;
+          transform: translateY(-110px) translateX(180px);
+        }
+
+        /* ✅ address-blockA ikut ditampilkan */
+        .address-blockA {
+  width: 100%;
+  transform: translateY(-50px);
+
+  h4 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #060C3C;
+    margin-bottom: 8px;
+  }
+
+   p {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 4px 0;
+
+            font-family: 'Chivo', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: #5D6180;
+            max-width: 170px;
+          }
+
+  /* 🔹 Pengaturan semua icon di blockA */
+  .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: #5D6180;
+    }
+  }
+
+  /* 🔹 Hanya icon telepon diatur tingginya */
+  .icon-phone svg {
+width: 19px;
+        height: 24px;
+        transform: translateY(-110px) translateX(180px) !important;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+      }}
+
+    .right {
+      order: 0;
+      width: 100%;
+      transform: translateY(150px);
+
+      .contact-form {
+        padding: 24px 16px;
+        min-height: auto;
+        gap: 24px;
+        transform: translateY(50px);
+
+        .form-row {
+          flex-direction: column;
+        }
+
+        button {
+          padding: 12px;
+        }
+      }
+    }
+  }
+
+  /* ✅ Desktop-heading & description disembunyikan */
+  .desktop-heading,
+  .desktop-description {
+    display: none;
+  }
+
+  .mobile-heading,
+  .mobile-description {
+    display: block;
+  }
+
+  /* ✅ Desktop office title disembunyikan, mobile muncul */
+  .desktop-office-title {
+    display: none;
+  }
+
+  .mobile-office-title {
+    display: block;
+  }
+
+  /* ✅ Hanya sembunyikan desktop-version */
+  .desktop-version {
+    display: none;
+  }
+
+  /* ✅ Mobile version tampil penuh */
+  .mobile-version {
+    display: block;
+    width: 100%;
+    transform: translateY(-300px);
+  }
+}
+
+/* Default desktop: sembunyikan versi mobile */
+.desktop-heading,
+.desktop-description {
+  display: block;
+}
+.mobile-heading,
+.mobile-description {
+  display: none;
+}
+
+/* Default: desktop tampil, mobile disembunyikan */
+.desktop-office-title {
+  display: block;
+}
+.mobile-office-title {
+  display: none;
+}
+
+/* ✅ HP ukuran kecil (319px – 360px) */
+@media (max-width: 360px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 0 16px;
+    transform: none;
+    gap: 40px;
+
+    .left {
+      order: 1;
+      width: 100%;
+      transform: none;
+      height: auto;
+
+      h2 {
+        font-size: 28px;
+        line-height: 36px;
+        transform: translateY(-880px); // ❗️Kalau tidak dibutuhkan, sebaiknya dihapus
+      }
+
+      .section-description {
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Chivo', sans-serif;
+        font-weight: 400;
+        letter-spacing: 0;
+        color: #5D6180;
+        margin-bottom: 16px;
+        max-width: 100%;
+        transform: translateY(-880px);
+      }
+
+      h3 {
+        font-size: 20px;
+        line-height: 28px;
+      }
+
+      .office-image {
+        width: 100%;
+        height: auto;
+      }
+
+      /* ✅ Responsive addresses */
+      .addresses {
+        flex-direction: column;
+        gap: 24px;
+
+        /* Semua block address jadi full width di mobile */
+        .address-block {
+          width: 100%;
+        }
+
+        a {
+          color: #333;
+          text-decoration: none;
+          transform: translateY(-110px) translateX(180px);
+        }
+
+        /* ✅ address-blockA ikut ditampilkan */
+        .address-blockA {
+  width: 100%;
+  transform: translateY(-50px);
+
+  h4 {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #060C3C;
+    margin-bottom: 8px;
+  }
+
+   p {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 4px 0;
+
+            font-family: 'Chivo', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            letter-spacing: 0;
+            color: #5D6180;
+            max-width: 170px;
+          }
+
+  /* 🔹 Pengaturan semua icon di blockA */
+  .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      stroke: #5D6180;
+    }
+  }
+
+  /* 🔹 Hanya icon telepon diatur tingginya */
+  .icon-phone svg {
+width: 19px;
+        height: 24px;
+        transform: translateY(-110px) translateX(180px) !important;
+  }
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+}
+      }}
+
+    .right {
+      order: 0;
+      width: 100%;
+      transform: translateY(150px);
+
+      .contact-form {
+        padding: 24px 16px;
+        min-height: auto;
+        gap: 24px;
+        transform: translateY(50px);
+
+        .form-row {
+          flex-direction: column;
+        }
+
+        button {
+          padding: 12px;
+        }
+      }
+    }
+  }
+
+  /* ✅ Desktop-heading & description disembunyikan */
+  .desktop-heading,
+  .desktop-description {
+    display: none;
+  }
+
+  .mobile-heading,
+  .mobile-description {
+    display: block;
+  }
+
+  /* ✅ Desktop office title disembunyikan, mobile muncul */
+  .desktop-office-title {
+    display: none;
+  }
+
+  .mobile-office-title {
+    display: block;
+  }
+
+  /* ✅ Hanya sembunyikan desktop-version */
+  .desktop-version {
+    display: none;
+  }
+
+  /* ✅ Mobile version tampil penuh */
+  .mobile-version {
+    display: block;
+    width: 100%;
+    transform: translateY(-300px);
+  }
+}
+
+/* Default desktop: sembunyikan versi mobile */
+.desktop-heading,
+.desktop-description {
+  display: block;
+}
+.mobile-heading,
+.mobile-description {
+  display: none;
+}
+
+/* Default: desktop tampil, mobile disembunyikan */
+.desktop-office-title {
+  display: block;
+}
+.mobile-office-title {
+  display: none;
+}

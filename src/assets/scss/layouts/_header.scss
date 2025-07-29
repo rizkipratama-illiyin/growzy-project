@@ -1,0 +1,258 @@
+.navbar-wrapper {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1112.5px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 60px;
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  padding: 3.13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25px;
+
+  img {
+    height: 32px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+
+  a {
+    text-decoration: none;
+    color: #0b0b0b;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    &:hover {
+      color: #6f3ff5;
+    }
+  }
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  .login {
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #0b0b0b;
+    text-decoration: none;
+  }
+
+  .signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 122px;
+    height: 50px;
+    padding: 15px 32px;
+    background-color: #6f3ff5;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+// Mobile Nav default
+.mobile-nav {
+  display: none;
+
+  a {
+    text-decoration: none;
+    color: #0b0b0b;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    &:hover {
+      color: #6f3ff5;
+    }
+  }
+
+  .signup {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 20px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+  .desktop-nav,
+  .nav-actions .login,
+  .nav-actions .signup {
+    display: none;
+  }
+
+  .nav-actions .hamburger {
+    display: block;
+  }
+}
+
+// RESPONSIVE UTAMA
+@media (max-width: 1024px) {
+  .navbar {
+    padding-left: 16px;
+    padding-right: 32px;
+  }
+
+  .nav-links {
+    gap: 24px;
+
+    a {
+      font-size: 15px;
+    }
+  }
+
+  .nav-actions {
+    gap: 16px;
+
+    .signup {
+      width: 110px;
+      padding: 12px 24px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left-group {
+    gap: 16px;
+  }
+
+  .nav-links {
+    gap: 16px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+
+  .nav-actions {
+    gap: 12px;
+
+    .signup {
+      width: 100px;
+      height: 44px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .desktop-nav,
+  .nav-actions .login,
+  .nav-actions .signup {
+    display: none;
+  }
+
+  .mobile-nav.show {
+    gap: 12px;
+
+    a {
+      font-size: 15px;
+    }
+
+    .signup {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    padding: 15px 32px;
+    background-color: #6f3ff5;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    gap: 10px;
+  }
+  }
+}
+.mobile-nav {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+.mobile-nav.showing {
+  opacity: 1;
+}
+
